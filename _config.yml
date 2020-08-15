@@ -3,10 +3,10 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            gibs
+title:            DustinKenefake
 tagline:          'Personal Website'
 description:      "Aspiring Data Nerd"
-url:              https://gibsramen.github.io
+url:              https://dkenefake.github.io
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
@@ -15,8 +15,8 @@ baseurl:          ''
                   # sidebar_blog_link below.
 
 author:
-  name:           'Gibraan Rahman'
-  url:            https://twitter.com/gibsramen
+  name:           'Dustin Kenefake'
+  url:            https://twitter.com/DKenefake
 
 paginate:         5
 # paginate_path:    '/page:num'
