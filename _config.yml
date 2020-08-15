@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            Dustin
 tagline:          'Personal Website'
-description:      "Aspiring Data Nerd"
+description:      "PhD ChemE"
 url:              https://dkenefake.github.io
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
@@ -16,7 +16,7 @@ baseurl:          ''
 
 author:
   name:           'Dustin Kenefake'
-  url:            https://twitter.com/DKenefake
+#   url:            https://twitter.com/DKenefake
 
 paginate:         5
 # paginate_path:    '/page:num'
