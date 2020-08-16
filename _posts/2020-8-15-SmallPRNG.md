@@ -31,7 +31,7 @@ The user can swap in any deterministic prng into the prng construct and it will 
 
 Here is an example of injecting the xorshift64 into a SmallPRNG(many common prngs are included in the library, including this one). First implement the specific prng.
 
-```C++
+```cpp
 _inline
 uint64_t xorshift64(prng_state<2>& s) {
 	uint64_t x = s.i64[0];
