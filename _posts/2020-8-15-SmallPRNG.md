@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SmallPRNG - A small header library to swap out random number generators
-date: 2020-05-20
+date: 2020-08-15
 categories:
   - Personal Projects
 ---
