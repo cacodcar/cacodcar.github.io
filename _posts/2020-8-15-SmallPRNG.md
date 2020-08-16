@@ -13,13 +13,13 @@ In fact a well known quote in pseudo-random number generation
 
 Numerical Recipes underlines the results of LCG based prngs due to [Random numbers fall mainly in the Planes](https://www.pnas.org/content/pnas/61/1/25.full.pdf). Many common random library implementations rely on LCG prngs. For example, with excel we can see the random numbers falling in the planes.
 
-![image](https://i.stack.imgur.com/JyKs8.png) 
+![image](/assets/imgs/prng_1.png) 
 
 Source:[https://stackoverflow.com/questions/38891165/is-excel-vbas-rnd-really-this-bad](https://stackoverflow.com/questions/38891165/is-excel-vbas-rnd-really-this-bad)
 
 When generating points in 3D this effect becomes exacerbated
 
-![image](https://upload.wikimedia.org/wikipedia/commons/a/a3/Lcg_3d.gif)
+![image](/assets/imgs/prng_2.gif)
 
 Source:[LCG Wikipedia](https://en.wikipedia.org/wiki/Linear_congruential_generator)
 
