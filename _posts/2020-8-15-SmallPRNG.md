@@ -23,7 +23,7 @@ When generating points in 3D this effect becomes exacerbated
 
 Source:[LCG Wikipedia](https://en.wikipedia.org/wiki/Linear_congruential_generator)
 
-### Now the question is, will this effect my application? I am using a different prng, will this effect my results?
+### Now the question is, will this effect your application? How do you know if your results are dependent on the behaviour of the specific prng you are using?
 
 I wrote SmallPRNG, a small header library in C++ to answer this question. It lets the user swap in different prng implementations into a templated interface.
 
