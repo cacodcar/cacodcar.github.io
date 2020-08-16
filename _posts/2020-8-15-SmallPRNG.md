@@ -3,7 +3,7 @@ layout: post
 title: SmallPRNG - A small header library to swap out random number generators
 date: 2020-08-15
 categories:
-  - Personal Projects
+  - Blog
 ---
 
 With Monte Carlo methods it is well known that the quality of the results are sensitive on the quality of the random number generation. With some spectacular differences being seen in the literature [1](https://surface.syr.edu/cgi/viewcontent.cgi?article=1033&context=npac), [2](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2992609/).
