@@ -135,7 +135,7 @@ def solve_problem(x: numpy.ndarray, y:numpy.ndarray)-> numpy.ndarray:
 ```
 
 ## Worked out example of Shortest Path
-We will solve the shortest path between 2 points by utilizing some aspects of calculus of variations. By a the same argument of $\nabla f(x) = 0$ for a function, we can derive the celibrated **Eular-Lagrange** Equation. For a functional of this form.
+We will solve the shortest path between 2 points by utilizing some aspects of calculus of variations. By a the same argument of $\nabla f(x) = 0$ for a function, we can derive the celibrated **Euler-Lagrange** Equation. For a functional of this form.
 $$F = \int_a^bI[x,x'(t),t]dt$$
 
 $$\delta F=0\rightarrow \frac{d}{dt}\left(\frac{\partial I}{\partial x'}\right) -\frac{\partial I}{\partial x}=0$$
