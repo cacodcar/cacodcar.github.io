@@ -63,8 +63,10 @@ def min_norm_solve_naive(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bo
 We can rearange the system as follows
 
 $$2\mathcal{I}x - C^T\lambda =  \vec{0} \rightarrow x = \frac{1}{2}C^T\lambda$$
+
 $$Cx = d \rightarrow \frac{1}{2}CC^T \lambda = d$$
-$$x = \frac{1}{2}C^T\lambda \rightarrow C^T(CC^T)^{-1}d$$
+
+$$x = \frac{1}{2}C^T\lambda \rightarrow x= C^T(CC^T)^{-1}d$$
 
 We can solve the multipliers system then substitute it back into the expresstion for x.
 
@@ -85,5 +87,5 @@ def min_norm_informed(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bool 
 
 ```
 
-This is much faster then the naive version as it solves a much smaller system of equations. For example, with 100 constraints and 1000 dimensions the informed version ran 80x faster then the naive version (.24 mS vs 19.3 ms) 
+This is much faster then the naive version as it solves a much smaller system of equations. For example, with 100 constraints and 1000 dimensions the informed version ran 80x faster then the naive version (.24 ms vs 19.3 ms) 
 
