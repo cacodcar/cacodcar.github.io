@@ -60,7 +60,7 @@ def min_norm_solve_naive(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bo
   
 ```
 
-We can rearange the system as follows
+We can rearrange the system
 
 $$2\mathcal{I}x - C^T\lambda =  \vec{0} \rightarrow x = \frac{1}{2}C^T\lambda$$
 
