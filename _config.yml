@@ -1,7 +1,5 @@
 # Dependencies
 markdown: kramdown
-kramdown:
-    math_engine: katex
     
 use_mathjax: true
 highlighter:      rouge
