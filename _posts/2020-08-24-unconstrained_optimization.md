@@ -34,9 +34,9 @@ How do we know we have a minimum of $f(x)$? We need to use necessary and suffici
 
 Here I will list the necessary and the sufficient conditions for unconstrained optimization (of functions with continuous first and second derivatives).
 
-* Necessary - $\nabla f(x^*) = 0, \nabla^2f(x^*)\succcurlyeq 0 \implies f(x^*)\leq f(x),x\in\mathcal{X}$
+Necessary - $\nabla f(x^*) = 0, \nabla^2f(x^*)\succcurlyeq 0 \implies f(x^*)\leq f(x),x\in\mathcal{X}$
 
-* Sufficient -$\nabla f(x^*) = 0, \nabla^2f(x^*)\succ 0 \iff f(x^*)< f(x),x\in\mathcal{X}$
+Sufficient -$\nabla f(x^*) = 0, \nabla^2f(x^*)\succ 0 \iff f(x^*)< f(x),x\in\mathcal{X}$
 
 I will do a series of worked out examples to show the application of these conditions. 
 
@@ -46,7 +46,7 @@ For the first example lets start off easy.
 
 $$f(x) = x^2, x\in\mathcal{R}$$
 
-If we apply the sufficiency conditions we have $\nabla f(x) = 2x=0$ and $\nabla^2 f(x) = 2 >0$. So we can solve the first equation for  $x^* = 0$,then check $\nabla^2 f(x^*) > 0$ so we can state that $x^* = 0$ is the global optimum (since this function is convex, local optimality $\implies$ global optimality)
+If we apply the sufficiency conditions we have $\nabla f(x) = 2x=0$ and $\nabla^2 f(x) = 2 >0$. So we can solve the first equation for  $x^* = 0$,then check $\nabla^2 f(x^*) > 0$ so we can state that $x^* = 0$ is the global optimum (since this function is convex, local optimality $\implies$ global optimality).
 
 And how we would solve it in python 3.7 using sympy
 ```python
