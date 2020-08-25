@@ -25,23 +25,21 @@ $$\frac{\partial \mathcal{L}}{\partial \lambda_i}(x^{\*}, \lambda) = 0, \text{wh
 
 By evaluating the partial derivatives, we can see the problem take shape.
 
-$$\frac{\partial \mathcal{L}}{\partial x}(x^{\*}, \lambda) = \frac{\partial}{\partial x}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = 2\mathcal{I}x^\* + C^t\lambda$$
-$$\frac{\partial \mathcal{L}}{\partial \lambda}(x^{\*}, \lambda) = \frac{\partial}{\partial \lambda}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = Cx^\* = d$$
+$$\frac{\partial \mathcal{L}}{\partial x}(x^{*}, \lambda) = \frac{\partial}{\partial x}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = 2\mathcal{I}x^* + C^t\lambda$$
+$$\frac{\partial \mathcal{L}}{\partial \lambda}(x^{*}, \lambda) = \frac{\partial}{\partial \lambda}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = Cx^* = d$$
 
 So solving the optimization problem is the same thing as solving the following linear system!
 
 $$
 \begin{align*} 
-\& 2\mathcal{I}x - C^T\lambda \&=  0 \\\\ 
-\& Cx  \&=  d
+& 2\mathcal{I}x - C^T\lambda &=  0 \\\\ 
+& Cx  &=  d
 \end{align*}
 $$
 
 Here is how we sould solve this python 3.7  with numpy. Numpy is quite fast, a problem with 20 constraints and $x\in\mathcal{R}^100$ took  on average 0.15 seconds to solve on my desktop.
 
 ```python
-import numpy
-
 import numpy
 
 def min_norm_solve(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bool = True) -> numpy.ndarray:
