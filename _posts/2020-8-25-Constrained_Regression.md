@@ -1,7 +1,7 @@
 ---
 layout: post
 mathjax: true
-title: Unconstrained Optimization - Explanation and Examples
+title: Constrained Min Norm
 date: 2020-08-25
 category:
   - Blog
