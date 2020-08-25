@@ -13,6 +13,7 @@ Optimization in plain terms is the task of solving for the best option given a g
 $$\min_{x} f(x),  \text{s.t.: } x\in \mathcal{X}$$
 
  Unconstrained optimization crops up in many fields under different names and understanding how to solve these types of problems is incredibly powerful. Some examples include, regressing a linear function onto the data set. Here we are minimizing the sum of squared error.
+ 
 $$\min_{\alpha_0,\alpha_1 } \sum_{i=0}^{n}\left(y_i - (\alpha_1x_i+\alpha_0)\right)^2$$
 
 Or more generally we could regress any arbitrary function to a dataset in this manner. Here is an example of regressing a $k^{th}$ order polynomial to a dataset.
