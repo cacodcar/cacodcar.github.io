@@ -19,9 +19,9 @@ $$L(x,\lambda) = x^T\mathcal{I}x + \sum_{i=0}^n\lambda_i(C_ix-d_i)$$
 
 The Optimality Conditions derived from KKT conditions are
 
-$$\frac{\partial \mathcal{L}}{\partial x_j}(x^{\*}, \lambda) = 0, \text{where } j\in\{0,\dots m} $$
+$$\frac{\partial \mathcal{L}}{\partial x_j}(x^{*}, \lambda) = 0, \text{where } j\in\{0,\dots m} $$
 
-$$\frac{\partial \mathcal{L}}{\partial \lambda_i}(x^{\*}, \lambda) = 0, \text{where } i\in\{0,\dots n}$$
+$$\frac{\partial \mathcal{L}}{\partial \lambda_i}(x^{*}, \lambda) = 0, \text{where } i\in\{0,\dots n}$$
 
 By evaluating the partial derivatives, we can see the problem take shape.
 
@@ -37,7 +37,7 @@ $$
 \end{align*}
 $$
 
-Here is how we sould solve this python 3.7  with numpy. Numpy is quite fast, a problem with 20 constraints and $x\in\mathcal{R}^{100}$ took  on average 0.15 seconds to solve on my desktop.
+Here is how I solved this Python 3.7  with numpy. Numpy is quite fast, a problem with 20 constraints and $x\in\mathcal{R}^{100}$ took  on average 0.15 seconds to solve on my desktop.
 
 ```python
 import numpy
