@@ -1,8 +1,8 @@
 ---
 layout: post
+mathjax: true
 title: Unconstrained Optimization - Explanation and Examples
 date: 2020-08-15
-usemathjax: true
 category:
   - Blog
 ---
