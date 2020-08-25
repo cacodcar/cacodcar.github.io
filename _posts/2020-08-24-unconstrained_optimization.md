@@ -22,6 +22,7 @@ Or more generally we could regress any arbitrary function to a dataset in this m
 These types of optimization problems are typically known as **min-norm** problems. 
 
 In a more complicated example, say we had an objective function (our goal) that took in an a function, such as finding the path between two points that minimizes the length you need to travel. Here $x$ belongs to $\mathcal{L}_2$, the space of all square integratable functions. Clearly the solution is a line between the two points, but the solution process is not intuitive.
+
 $$\min_{x} F[x(t), x'(t), t] = \int_{x_1}^{x_2}\sqrt{1+x'(t)^2}$$
 
 ## Optimality Conditions - What makes a solution
@@ -32,9 +33,9 @@ How do we know we have a minimum of $f(x)$? We need to use necessary and suffici
 
 Here I will list the necessary and the sufficient conditions for unconstrained optimization (of functions with continuous first and second derivatives).
 
-* Necessary - $\nabla f(x^*) = 0, \nabla^2f(x^*)\succcurlyeq 0 \implies f(x^*)\leq f(x),x\in\mathcal{X}$
+* Necessary - \\(\nabla f(x^*) = 0, \nabla^2f(x^*)\succcurlyeq 0 \implies f(x^*)\leq f(x),x\in\mathcal{X}\\)
 
-* Sufficient -$\nabla f(x^*) = 0, \nabla^2f(x^*)\succ 0 \iff f(x^*)< f(x),x\in\mathcal{X}$
+* Sufficient -\\(\nabla f(x^*) = 0, \nabla^2f(x^*)\succ 0 \iff f(x^*)< f(x),x\in\mathcal{X}\\)
 
 I will do a series of worked out examples to show the application of these conditions. 
 
