@@ -1,15 +1,12 @@
 ---
 layout: post
 mathjax: true
-title: Constrained Min Norm
+title: Constrained Min Norm - Linear Equality Constraints
 date: 2020-08-25
 category:
   - Blog
 ---
-
-# Constrained Min Norm - Linear Equality Constraints
-
-Lately I have been reading on how to regress data with constraints on the fitting parameters, mainly for applications in data science. In this post we will look at how to solve optimization problems of the following form.
+Recently I have been reading on how to regress with constraints. It has uses in fitting models to data as well as signal reconstruction. In this post we will look at how to solve optimization problems of the following form.
 
 $$\min_{x} ||x||^2, \text{ s.t.: } Cx = d$$
 
@@ -19,9 +16,9 @@ $$L(x,\lambda) = x^T\mathcal{I}x + \sum_{i=0}^n\lambda_i(C_ix-d_i)$$
 
 The Optimality Conditions derived from KKT conditions are
 
-$$\frac{\partial \mathcal{L}}{\partial x_j}(x^{*}, \lambda) = 0, j\in\{0,\dots m} $$
+$$\frac{\partial \mathcal{L}}{\partial x_j}(x^{*}, \lambda) = 0, j\in\{0,\dots m\} $$
 
-$$\frac{\partial \mathcal{L}}{\partial \lambda_i}(x^{*}, \lambda) = 0,i\in\{0,\dots n}$$
+$$\frac{\partial \mathcal{L}}{\partial \lambda_i}(x^{*}, \lambda) = 0,i\in\{0,\dots n\}$$
 
 By evaluating the partial derivatives, we can see the problem take shape.
 
