@@ -19,20 +19,20 @@ $$L(x,\lambda) = x^T\mathcal{I}x + \sum_{i=0}^n\lambda_i(C_ix-d_i)$$
 
 The Optimality Conditions derived from KKT conditions are
 
-$$\frac{\partial \mathcal{L}}{\partial x_j}(x^{*}, \lambda) = 0, \text{where } j\in\{0,\dots m} $$
+$$\frac{\partial \mathcal{L}}{\partial x_j}(x^{*}, \lambda) = 0, j\in\{0,\dots m} $$
 
-$$\frac{\partial \mathcal{L}}{\partial \lambda_i}(x^{*}, \lambda) = 0, \text{where } i\in\{0,\dots n}$$
+$$\frac{\partial \mathcal{L}}{\partial \lambda_i}(x^{*}, \lambda) = 0,i\in\{0,\dots n}$$
 
 By evaluating the partial derivatives, we can see the problem take shape.
 
-$$\frac{\partial \mathcal{L}}{\partial x}(x^{*}, \lambda) = \frac{\partial}{\partial x}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = 2\mathcal{I}x^* + C^t\lambda$$
+$$\frac{\partial \mathcal{L}}{\partial x}(x^{*}, \lambda) = \frac{\partial}{\partial x}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = 2\mathcal{I}x^* + C^t\lambda = \vec{0}$$
 $$\frac{\partial \mathcal{L}}{\partial \lambda}(x^{*}, \lambda) = \frac{\partial}{\partial \lambda}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = Cx^* = d$$
 
 So solving the optimization problem is the same thing as solving the following linear system!
 
 $$
 \begin{align*} 
-& 2\mathcal{I}x - C^T\lambda &=  0 \\\\ 
+& 2\mathcal{I}x - C^T\lambda &=  \vec{0} \\\\ 
 & Cx  &=  d
 \end{align*}
 $$
