@@ -34,7 +34,7 @@ $$
 \end{align*}
 $$
 
-Here is how I solved this Python 3.7  with numpy. Numpy is quite fast, a problem with 20 constraints and $x\in\mathcal{R}^{100}$ took  on average 0.15 seconds to solve on my desktop.
+Here is how I solved this using Python 3.7 and numpy. Since numpy is quite fast, a problem with 20 constraints and $x\in\mathcal{R}^{100}$ took  on average 0.15 seconds to solve on my desktop.
 
 ```python
 import numpy
