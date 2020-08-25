@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: Unconstrained Optimization - Explanation and Examples
-date: 2020-08-15
+date: 2020-08-25
 category:
   - Blog
 ---
