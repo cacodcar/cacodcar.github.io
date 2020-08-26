@@ -14,7 +14,7 @@ The Lagrange function of this problem is the following
 
 $$L(x,\lambda) = x^T\mathcal{I}x + \sum_{i=0}^n\lambda_i(C_ix-d_i)$$
 
-The Optimality Conditions derived from KKT conditions are
+The Optimality Conditions are
 
 $$\frac{\partial \mathcal{L}}{\partial x_j}(x^{*}, \lambda) = 0, j\in\{0,\dots m\} $$
 
@@ -22,10 +22,10 @@ $$\frac{\partial \mathcal{L}}{\partial \lambda_i}(x^{*}, \lambda) = 0,i\in\{0,\d
 
 By evaluating the partial derivatives, we can see the problem take shape.
 
-$$\frac{\partial \mathcal{L}}{\partial x}(x^{*}, \lambda) = \frac{\partial}{\partial x}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = 2\mathcal{I}x^* + C^t\lambda = \vec{0}$$
+$$\frac{\partial \mathcal{L}}{\partial x}(x^{*}, \lambda) = \frac{\partial}{\partial x}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = 2\mathcal{I}x^* + C^T\lambda = \vec{0}$$
 $$\frac{\partial \mathcal{L}}{\partial \lambda}(x^{*}, \lambda) = \frac{\partial}{\partial \lambda}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = Cx^* = d$$
 
-So solving the optimization problem is the same thing as solving the following linear system!
+So, solving this optimization problem is the same thing as solving the following linear system!
 
 $$
 \begin{align*} 
@@ -34,9 +34,9 @@ $$
 \end{align*}
 $$
 
-It can be solved by solving the orignial system or some manipulations can be made that rapidly accelterate this process.
+It can be solved by solving the original system or some manipulations can be made that rapidly accelerate this process.
 
-Here is the source code for the Naive version in Python 3.7 and numpy.
+Here is the source code for the naive version in Python 3.7 and NumPy.
 
 ```python
 import numpy
@@ -60,7 +60,7 @@ def min_norm_solve_naive(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bo
   
 ```
 
-We can rearrange the system
+We can rearrange the system.
 
 $$2\mathcal{I}x - C^T\lambda =  \vec{0} \rightarrow x = \frac{1}{2}C^T\lambda$$
 
@@ -68,9 +68,9 @@ $$Cx = d \rightarrow \frac{1}{2}CC^T \lambda = d$$
 
 $$x = \frac{1}{2}C^T\lambda \rightarrow x= C^T(CC^T)^{-1}d$$
 
-We can solve the multipliers system then substitute it back into the expresstion for x.
+We can solve the multipliers system then substitute it back into the expression for x.
 
-Here is the source code for the informed version in Python 3.7 and Numpy.
+Here is the source code for the informed version in Python 3.7 and NumPy.
 
 ```python
 import numpy
@@ -87,5 +87,5 @@ def min_norm_informed(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bool 
 
 ```
 
-This is much faster then the naive version as it solves a much smaller system of equations. For example, with 100 constraints and 1000 dimensions the informed version ran 80x faster then the naive version (.24 ms vs 19.3 ms) 
+This is much faster than the naive version as it solves a much smaller system of equations. For example, with 100 constraints and 1000 dimensions the informed version ran 80x faster than the naive version (.24 ms vs 19.3 ms).
 
