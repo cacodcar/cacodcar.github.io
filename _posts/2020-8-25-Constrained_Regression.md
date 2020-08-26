@@ -77,7 +77,10 @@ import numpy
 
 def min_norm_informed(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bool = True) -> numpy.ndarray:
     
+    # solve the langrange multiplier system
     lagrange_multipliers = numpy.linalg.solve(.5*C@C.T, d)
+    
+    # substatute back to compute x
     x = .5*C.T@lagrange_multipliers
     
     if return_multipliers:
