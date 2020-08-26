@@ -10,9 +10,9 @@ Recently I have been reading on how to regress with constraints. It has uses in 
 
 $$\min_{x} ||x||^2, \text{ s.t.: } Cx = d$$
 
-The Lagrange function of this problem is the following
+The Lagrange function of this problem after scaling is the following
 
-$$L(x,\lambda) = x^T\mathcal{I}x + \sum_{i=0}^n\lambda_i(C_ix-d_i)$$
+$$L(x,\lambda) = \frac{1}{2}x^T\mathcal{I}x + \sum_{i=0}^n\lambda_i(C_ix-d_i)$$
 
 The Optimality Conditions are
 
@@ -22,14 +22,14 @@ $$\frac{\partial \mathcal{L}}{\partial \lambda_i}(x^{*}, \lambda) = 0,i\in\{0,\d
 
 By evaluating the partial derivatives, we can see the problem take shape.
 
-$$\frac{\partial \mathcal{L}}{\partial x}(x^{*}, \lambda) = \frac{\partial}{\partial x}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = 2\mathcal{I}x^* + C^T\lambda = \vec{0}$$
-$$\frac{\partial \mathcal{L}}{\partial \lambda}(x^{*}, \lambda) = \frac{\partial}{\partial \lambda}\left( x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = Cx^* = d$$
+$$\frac{\partial \mathcal{L}}{\partial x}(x^{*}, \lambda) = \frac{\partial}{\partial x}\left( \frac{1}{2}x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = \mathcal{I}x^* + C^T\lambda = \vec{0}$$
+$$\frac{\partial \mathcal{L}}{\partial \lambda}(x^{*}, \lambda) = \frac{\partial}{\partial \lambda}\left( \frac{1}{2} x^T\mathcal{I}x + \lambda^T(Cx-d)\right) = Cx^* = d$$
 
 So, solving this optimization problem is the same thing as solving the following linear system!
 
 $$
 \begin{align*} 
-& 2\mathcal{I}x + C^T\lambda &=  \vec{0} \\\\ 
+& \mathcal{I}x + C^T\lambda &=  \vec{0} \\\\ 
 & Cx  &=  d
 \end{align*}
 $$
@@ -47,7 +47,7 @@ def min_norm_solve_naive(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bo
     num_l = C.shape[0]
     
     # Build the system to solve
-    A = numpy.block([[2*numpy.eye(num_x), C.T],[C, numpy.zeros((num_l,num_l))]])
+    A = numpy.block([[numpy.eye(num_x), C.T],[C, numpy.zeros((num_l,num_l))]])
     b = numpy.block([[numpy.zeros((num_x,1))],[d]])
     
     # solve linear system with numpy
@@ -62,11 +62,11 @@ def min_norm_solve_naive(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bo
 
 We can rearrange the system.
 
-$$2\mathcal{I}x + C^T\lambda =  \vec{0} \rightarrow x = -\frac{1}{2}C^T\lambda$$
+$$\mathcal{I}x + C^T\lambda =  \vec{0} \rightarrow x = -C^T\lambda$$
 
-$$Cx = d \rightarrow -\frac{1}{2}CC^T \lambda = d$$
+$$Cx = d \rightarrow -CC^T \lambda = d$$
 
-$$x = -\frac{1}{2}C^T\lambda \rightarrow x= C^T(CC^T)^{-1}d$$
+$$x = -C^T\lambda \rightarrow x= C^T(CC^T)^{-1}d$$
 
 We can solve the multipliers system then substitute it back into the expression for x.
 
@@ -78,10 +78,10 @@ import numpy
 def min_norm_informed(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bool = True) -> numpy.ndarray:
     
     # solve the langrange multiplier system
-    lagrange_multipliers = numpy.linalg.solve(.5*C@C.T, d)
+    lagrange_multipliers = numpy.linalg.solve(-C@C.T, d)
     
     # substatute back to compute x
-    x = .5*C.T@lagrange_multipliers
+    x = -C.T@lagrange_multipliers
     
     if return_multipliers:
         return numpy.block([[x],[lagrange_multipliers]])
