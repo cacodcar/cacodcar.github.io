@@ -29,7 +29,7 @@ So, solving this optimization problem is the same thing as solving the following
 
 $$
 \begin{align*} 
-& 2\mathcal{I}x - C^T\lambda &=  \vec{0} \\\\ 
+& 2\mathcal{I}x + C^T\lambda &=  \vec{0} \\\\ 
 & Cx  &=  d
 \end{align*}
 $$
@@ -62,11 +62,11 @@ def min_norm_solve_naive(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bo
 
 We can rearrange the system.
 
-$$2\mathcal{I}x - C^T\lambda =  \vec{0} \rightarrow x = \frac{1}{2}C^T\lambda$$
+$$2\mathcal{I}x + C^T\lambda =  \vec{0} \rightarrow x = -\frac{1}{2}C^T\lambda$$
 
-$$Cx = d \rightarrow \frac{1}{2}CC^T \lambda = d$$
+$$Cx = d \rightarrow -\frac{1}{2}CC^T \lambda = d$$
 
-$$x = \frac{1}{2}C^T\lambda \rightarrow x= C^T(CC^T)^{-1}d$$
+$$x = -\frac{1}{2}C^T\lambda \rightarrow x= C^T(CC^T)^{-1}d$$
 
 We can solve the multipliers system then substitute it back into the expression for x.
 
