@@ -27,9 +27,11 @@ $$\lim_{i\to\infty}{\phi_i(x)} = y(x)$$
 
 # Example - Simple First-order decay
 The equation this example is the following
+
 $$y'(x) = -y(x), y(0) = 1$$
 
 The following recurance relation can be made
+
 $$\phi_0(x) = y_0$$
 
 $$\phi_{i+1}(x) = y_0 -\int_{x_0}^{x}{\phi_i(x)}$$
