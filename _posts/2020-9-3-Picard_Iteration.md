@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: Picard Iteration - Theory and Application
-date: 2020-09-02
+date: 2020-09-03
 category:
   - Blog
 ---
