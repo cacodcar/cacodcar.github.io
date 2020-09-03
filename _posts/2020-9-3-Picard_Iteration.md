@@ -68,7 +68,7 @@ y = picard_solver(1,0,lambda x, y: -y, n = 5)
 
 # Example - logistic growth
 
-$$y'(x) = -y(x)*(1-y(x)), y(0) = .2$$
+$$y'(x) = -y(x)*(1-y(x)), y(0) = .5$$
 
 $$\phi_0(x) = y_0$$
 
