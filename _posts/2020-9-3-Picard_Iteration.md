@@ -7,7 +7,7 @@ category:
   - Blog
 ---
 
-Picard Iteration is a neet method I stumbled across today. It is in effect an iterative method coming from fixed-point theory to solve an inital value problem symbolically. 
+Picard Iteration is a neet method I stumbled across today. It is an iterative method coming from fixed-point theory to solve an inital value problem symbolically. 
 
 The theory behind it is direct and straitforward. Given an IVP of the following form
 
