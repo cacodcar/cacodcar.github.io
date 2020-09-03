@@ -80,7 +80,7 @@ We can solve this by plugging our parameters into the picard_solver funtion
 y = picard_solver(0,.2, lambda x, y: -y*(1-y), n = 5)
 ```
 
-and then compare against the known result. I used plotly so that the graph figure is interactive, please zoom in and find the differences between the picard and exact solutions. (hint: look at the edges).
+And then compare against the known solution. I used plotly to create an interactive graph so please zoom in and find the differences between the picard and exact solutions. (hint: look at the edges).
 
 ```python
 import numpy 
