@@ -20,15 +20,18 @@ $$y(x)-y(x_0) = \int_{x_0}^{x}{f(x,y(x))dx} \rightarrow  y(x)= y(x_0) +\int_{x_0
 With this expression, we can inject an initial guess and iterativley solve
 
 $$\phi_0(x) = y_0$$
+
 $$\phi_{i+1}(x) = y_0 + \int_{x_0}^{x}{f(x,\phi_i(x))dx}$$
+
 $$\lim_{i\to\infty}{\phi_i(x)} = y(x)$$
 
 # Example - Simple First-order decay
 The equation this example is the following
 $$y'(x) = -y(x), y(0) = 1$$
 
-The followin recurance relation can be made
+The following recurance relation can be made
 $$\phi_0(x) = y_0$$
+
 $$\phi_{i+1}(x) = y_0 -\int_{x_0}^{x}{\phi_i(x)}$$
 
 at eatch iteration we slowly build a more accurate solution
@@ -41,7 +44,7 @@ $$\phi_3(x) = 1 - x + \frac{x^2}{2}- \frac{x^3}{6}$$
 
 $$\phi_n(x) = \sum_{k=0}^{n}\frac{x^k}{k!}$$
 
-$$\lim_{n\to\infty}{\phi_n(x)} =  \sum_{k=0}^{\infty}\frac{x^k}{k!} = \e^{-x} = y(x)$$
+$$\lim_{n\to\infty}{\phi_n(x)} =  \sum_{k=0}^{\infty}\frac{x^k}{k!} = e^{-x} = y(x)$$
 
 This is the correct answer!
 
@@ -68,6 +71,7 @@ y = picard_solver(1,0,lambda x, y: -y, n = 5)
 $$y'(x) = -y(x)*(1-y(x)), y(0) = .2$$
 
 $$\phi_0(x) = y_0$$
+
 $$\phi_{i+1}(x) = y_0 -\int_{x_0}^{x}{\phi_i(x)*(1-\phi_i(x))}$$
 
 We can solve this by plugging our parameters into the picard_solver funtion
