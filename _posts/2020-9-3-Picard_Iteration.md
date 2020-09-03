@@ -86,21 +86,29 @@ And then compare against the known solution. I used plotly to create an interact
 import numpy 
 import plotly.graph_objects as go
     
-y = picard_solver(.5,0, lambda x, y: y*(1-y), n = 5)
+    
+y_set = [picard_solver(.5,0, lambda x, y: y*(1-y), n = i)  for i in range(1,6)]
 
 x_grid = numpy.linspace(-2,2,1000)
 
-y_picard = numpy.array([float(y.evalf(subs={x:x_i})) for x_i in x_grid])
+y_picard = list()
+
+for y in y_set:
+    y_picard.append(numpy.array([float(y.evalf(subs={x:x_i})) for x_i in x_grid]))
+
 y_exact = numpy.exp(x_grid)/(1+numpy.exp(x_grid))
 
 fig = go.Figure()
 
-fig.add_trace(go.Scatter(x = x_grid, y = y_picard, name = "Picard Solution"))
+for i,y_order in enumerate(y_picard):
+    fig.add_trace(go.Scatter(x = x_grid, y = y_order, name = f"Picard Order {i+1}"))
+
+# fig.add_trace(go.Scatter(x = x_grid, y = y_picard, name = "Picard Solution"))
 fig.add_trace(go.Scatter(x = x_grid, y = y_exact, name = "Exact Solution"))
 
 fig.show()
 
-fig.write_html("Picard vs Exact.html")
+fig.write_html("picard_vs_exact.html")
 
 ```
 
