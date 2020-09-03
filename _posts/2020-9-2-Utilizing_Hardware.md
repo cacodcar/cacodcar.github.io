@@ -11,7 +11,7 @@ I have been doing some monte-carlo recently, and I wanted to show the difference
 
 I am going to use the standard estimation of pi as a benchmark of performance. This problem is defined by the following
 
-$$\pi = \lim_{n\to\infty}{ 4 \frac{count(x^2 +y^2 < 1)}{N}$$
+$$\pi = \lim_{n\to\infty}{ 4 \frac{count(x^2 +y^2 < 1)}{N}}$$
 
 I will show the code at the end, but I just want to show the results here. (8600K @ 4.5Ghz, Nvidia 1080)  
 
