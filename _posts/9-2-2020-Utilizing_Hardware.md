@@ -1,7 +1,7 @@
 ---
 layout: post
 mathjax: true
-title: Utilizing Hardware - Python, Numba and Cuda
+title: Utilizing Hardware - Python Numba and Cuda
 date: 2020-09-02
 category:
   - Blog
