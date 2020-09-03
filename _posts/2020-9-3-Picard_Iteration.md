@@ -44,9 +44,9 @@ $$\phi_2(x) = 1 - x + \frac{x^2}{2}$$
 
 $$\phi_3(x) = 1 - x + \frac{x^2}{2}- \frac{x^3}{6}$$
 
-$$\phi_n(x) = \sum_{k=0}^{n}\frac{x^k}{k!}$$
+$$\phi_n(x) = \sum_{k=0}^{n}\frac{(-1)^kx^k}{k!}$$
 
-$$\lim_{n\to\infty}{\phi_n(x)} =  \sum_{k=0}^{\infty}\frac{-1^{k}x^k}{k!} = e^{-x} = y(x)$$
+$$\lim_{n\to\infty}{\phi_n(x)} =  \sum_{k=0}^{\infty}\frac{(-1)^{k}x^k}{k!} = e^{-x} = y(x)$$
 
 This is the correct answer!
 
