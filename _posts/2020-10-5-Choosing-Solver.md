@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: Choosing the correct solver type - Dense or Sparse
-date: 2020-09-03
+date: 2020-10-05
 category:
   - Blog
 ---
