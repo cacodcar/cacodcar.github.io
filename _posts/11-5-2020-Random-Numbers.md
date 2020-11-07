@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: Speed Differences between different RNGs
-date: 2020-10-27
+date: 2020-11-7
 category:
   - Blog
 ---
