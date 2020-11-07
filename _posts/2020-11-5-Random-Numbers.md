@@ -62,7 +62,7 @@ int benchmark() {
 	auto end = std::chrono::high_resolution_clock::now();
 	auto diff = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
-
+	// this is to keep the compiler from "optimizing" out the prng loop
 	std::cout << sum << "        ";
 
 	return diff.count();
