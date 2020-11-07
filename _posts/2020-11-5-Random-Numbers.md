@@ -25,7 +25,10 @@ Running Monti Carlo simulations rely on the fast generation of (and hopefully hi
 |     Salsa20     |     17638    |
 
 
-We can see that Salsa20 is by far the slowest, this is do it being a cryptographically secure algorithm meant for excellent statistical quality and data security instead of speed. While the prng algorithms with higher "quality" usually take longer, the Improved Square algorithm is the fastest in the list while still having some strong statistical certificates (passes PractRand with 256Gb tested). However, in this case I suspect that the reason that Improved Square is so much faster is that the compiler is able to optimize away the prng itself. This can be seen in the dissassembly of the main benchmarking loop.
+We can see that Salsa20 is by far the slowest, this is do it being a cryptographically secure algorithm meant for excellent statistical quality and data security instead of speed. While the prng algorithms with higher "quality" usually take longer, the Improved Square algorithm is the fastest in the list while still having some strong statistical certificates (passes PractRand with 256Gb tested). However, in this case I suspect that the reason that Improved Square is so much faster is that the compiler is able to optimize away the prng itself. 
+
+
+This can be seen in the dissassembly of the main benchmarking loop.
 
 ```asm 
 $LL433@main:
@@ -44,7 +47,7 @@ $LL433@main:
 
 
 To run experiment on your machine compile and run the following
-```C++
+```cpp
 #include"rng.h"
 #include<iostream>
 #include<chrono>
