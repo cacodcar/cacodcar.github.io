@@ -30,7 +30,7 @@ We can see that Salsa20 is by far the slowest, this is do it being a cryptograph
 
 This can be seen in the dissassembly of the main benchmarking loop.
 
-```asm 
+```nasm 
 $LL433@main:
 
 ; 319  : 	s.i64[0]++;
