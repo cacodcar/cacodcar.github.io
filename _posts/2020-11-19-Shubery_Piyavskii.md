@@ -55,7 +55,7 @@ def shubert_piyavskii(f, a:float, b:float, l:float, epsilon:float, output_data =
 ```
 This method generates successive under estimators for the function, from the Lipchitz constant information (these are the cones). Then it evaluates the lowest under estimator. It iterates until the difference between the under estimator is within 1 epsilon of the global min. This iterative procedure is also called the sawtooth method for reasons that should become clear when looking at the animation.
 
-<img src="https://github.com/DKenefake/dkenefake.github.io/blob/master/assets/imgs/sawtooth.gif">
+<img src="{{ site.baseurl }}/assets/imgs/sawtooth.gif">
 
 The code to generate the plot is included. This uses the python gif library.
 
