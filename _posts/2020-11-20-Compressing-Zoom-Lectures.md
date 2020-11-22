@@ -11,7 +11,7 @@ I have been recording classes on zoom and the accumulation of files is starting 
 
 Here is the encording settings that I used.
 
-!()[]
+![](/assets/imgs/handbreak.png)
 
 A set of class recordings that include scrolling around a pdf and static power points was used to benchmark the file size reduction. As a sided note, there was no noticable degridation in video quality. I saw a 5 fold reduction in file size, from 20 GB to 4 GB. This made uploading and sharing videos much quicker and easier.
 
