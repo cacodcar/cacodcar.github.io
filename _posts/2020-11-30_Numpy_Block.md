@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: Numpy Block is slow 
-date: 2020-10-27
+date: 2020-11-30
 category:
   - Blog
 ---
