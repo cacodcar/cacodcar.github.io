@@ -10,7 +10,7 @@ I have been writting a solver that makes heavy use of Numpy. Due error checking 
 
 I am compairing 3 different classes of matrix blocking
 
-* Blocking many row matrices into one row
+* Blocking many single row matrices into one matrix
 * Large matrix composition
 
 
