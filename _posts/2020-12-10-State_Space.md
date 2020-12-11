@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: Model Predictive Control - State Space Model 
-date: 2020-08-15
+date: 2020-12-10
 category:
   - Blog
 ---
