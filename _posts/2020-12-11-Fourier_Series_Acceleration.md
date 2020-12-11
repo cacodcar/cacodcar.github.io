@@ -73,9 +73,7 @@ def evaluate_series_accelerated(x_points: numpy.ndarray, n:int)-> numpy.ndarray:
 ```
 
 Here is the plot of the sum of squared errors of the original and the accelerated with ground truth. Taken with 10000 linear spaced points between 0 and $\pi/2$. As we can see the accelerated series only needs a few terms to get to acceptable accuracy while the unmodified takes many more orders of magnitude of terms to hit the same accuracy.
-
-![](https://github.com/DKenefake/dkenefake.github.io/blob/master/assets/imgs/fourier_series_time_comp.png)
-
+![](/assets/imgs/fourier_series_time_comp.png)
 
 
 
