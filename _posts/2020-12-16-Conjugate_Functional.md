@@ -37,19 +37,19 @@ $$f(x) = ax+b$$
 
 $$f^*(\zeta) = \sup_{x\in\mathcal{R}}\{\zeta x - f(x)\} = \sup_{x\in\mathcal{R}}\{\zeta x - ax+b\}$$
 
-We can see that $f^*$ becomes unbounded for any $zeta\neq a$, so The domain of the conjugate function $f^*$ is just $\{a\}$ and $f^*(a) = -b$
+We can see that $f^* $ becomes unbounded for any $zeta\neq a$, so The domain of the conjugate function $f^* $ is just $\{a\}$ and $f^* (a) = -b$
 
 ## Example 2
 
 $$f(x) = -\log(x)$$
 
-$$f*(\zeta) = \sup_{x\in\mathcal{R}}\{\zeta x - f(x)\} = \sup_{x\in\mathcal{R}}\{\zeta x + \log(x)\}$$
+$$f* (\zeta) = \sup_{x\in\mathcal{R}}\{\zeta x - f(x)\} = \sup_{x\in\mathcal{R}}\{\zeta x + \log(x)\}$$
 
 if $\zeta > 0$ we can just increase $x$ arbitrarilly and have an unbounded function, so $\zeta<0$ and using simple calculus to maximize the expresstion we get
 
 $$\frac{\partial}{\partial x} \left(\zeta x + \log(x) \right) = 0 \rightarrow \zeta + \frac{1}{x} = 0 \rightarrow x = \frac{-1}{\zeta}$$
 
-Plug this back into the definition of the frenchel dual and we get $f^*(\zeta) = -\log(\zeta) - 1$ for $\zeta < 0$.
+Plug this back into the definition of the frenchel dual and we get $f^* (\zeta) = -\log(-\zeta) - 1$ for $\zeta < 0$.
 
 ## Example 3
 This example is in $\mathcal{R}^n$. The strictly convex quadtratic function. This comes up frequently in optimization.
