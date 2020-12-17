@@ -29,7 +29,7 @@ However, the dual of other functions is not necessarily so easy to see and calcu
 
 $$f^* (\zeta) = \sup_{x\in X}\{\langle \zeta,x\rangle - f(x)\}$$
 
-Now this can look more than a little intimidating, but it is not actually that bad. If we restrict ourselves a little more for the next example, to $\mathcal{R}$ then we can clearify it. If $\textbf{X} = \mathcal{R}^n$ then $\textbf{X}\textsuperscript{* } = \mathcal{R}^n$, and the inner product for this space becomes $\zeta^Tx$. For $n=1$ the inner product is just multiplication. The fist part of the process is determining the domain of the dual and the second part is calculating the values of the conjugate functional on that range. Examples 1,2, and 3 are taken from Boyd's Convex optimization book.
+Now this can look more than a little intimidating, but it is not actually that bad. If we restrict ourselves a little more for the next example, to $\mathcal{R}$ then we can clearify it. If $\textbf{X} = \mathcal{R}^n$ then $\textbf{X}^* = \mathcal{R}^n$, and the inner product for this space becomes $\zeta^Tx$. For $n=1$ the inner product is just multiplication. The fist part of the process is determining the domain of the dual and the second part is calculating the values of the conjugate functional on that range. Examples 1,2, and 3 are taken from Boyd's Convex optimization book.
 
 ## Example 1
 
