@@ -12,7 +12,7 @@ Orthogonalizing a basis is an important topic in computational science and engin
 I have included the code for a simple Numpy implementation of Gram-Schmidt, here the row vectors of A are being orthogonalized. As a note, the usual convention is that the column vectors of A are being orthogonalized.
 
 
-```Python
+```python
 def classical_gs(A):
     num_vecs = A.shape[0]
     
@@ -31,7 +31,7 @@ However, this suffers from floating point error accumulation with ill-conditione
 
 This has been approved upon with the modified Gram-Schmidt algorithm, where the floating-point error builds up is mitigated much better. As you can see this is only reordering the order of operations from the previous algorithm, and if we had exact arithmetic the results would be exactly the same. The performance is approximately half of the previous algorithm in run time, but the accuracy of the result is much improved upon.
 
-```Python
+```python
 def modified_gs(A:numpy.ndarray)->numpy.ndarray:
     num_vecs = A.shape[0]
     num_dims = A.shape[1]
@@ -55,7 +55,7 @@ def modified_gs(A:numpy.ndarray)->numpy.ndarray:
 In regression of polynomials it is helpful to orthogonalize a matrix called the [Hilbert matrix](https://en.wikipedia.org/wiki/Hilbert_matrix). For relatively small Hilbert matrices we can see a large difference in accuracy between the original and modified Gram-Schmidt algorithms. For this example, we are going to orthogonalize the 10th Hilbert matrix.
 
 This is relativley simple 
-```Python
+```python
 from scipy.linalg import hilbert
 
 A = hilbert(10)
@@ -66,7 +66,7 @@ Q2 = modified_gs(A)
 
 Now we want to analyze the resulting orthonormal vectors to make sure that they are in fact orthonormal. This is a utility function that allows us to calculate the worse failure in orthogonality and norm.
 
-```Python
+```python
 def characterize_basis(Q:numpy.ndarray)-> numpy.ndarray:
     H = Q.T@Q
     err_norm = numpy.max(numpy.abs(numpy.diag(H)-1))
@@ -97,7 +97,7 @@ Worse error from othoginality is 3.9196055384436324e-05
 
 And you can even successively re-orthogonalize, over and over again as an iterative process if the numeric of the systems makes the round off error hard to deal with. Such as here when dealing with the Hilbert matrix, here our example will be the 1000th Hilbert matrix, a much harder problem and extremely ill-conditioned. Our procedure is extremely simple; we orthogonalize, and iteratively orthogonalize until our error condition is met or we hit an iteration limit. Here we will characterize the matrix at each intermediate step.
 
-```Python
+```python
 
 Q = modified_gs(A)
 
