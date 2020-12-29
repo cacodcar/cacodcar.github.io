@@ -7,7 +7,7 @@ category:
   - Blog
 ---
 
-I came across this method the other week and I think it is a really neat way to tackle 1D global optimization. The Shubert-Piyavskii method is a global optimization method meaning that it is guaranteed to converge to the global minimum of a function. The method requires that the function that we are trying to minimize if Lipschitz continuous and that we know a reasonable upper bound of the constant. This is in effect a stipulation that the magnitude of the derivative is bounded. One of the disadvantages of this method are that you must know either the Lipchitz constant or a reasonable number the minimally bounds the Lipchitz constant.
+I came across this method the other week and I think it is a really neat way to tackle 1D global optimization. The Shubert-Piyavskii method is a global optimization method meaning that it is guaranteed to converge to the global minimum of a function. The method requires that the function that we are trying to minimize be Lipschitz continuous and that we know a reasonable upper bound of the constant. This is, in effect a, stipulation that the magnitude of the derivative is bounded. One of the disadvantages of this method are that you must know either the Lipchitz constant or a reasonable number the minimally bounds the Lipchitz constant.
 
 
 I have adapted the Julia source code from "Algorithms for Optimization" by Kochenderfer
