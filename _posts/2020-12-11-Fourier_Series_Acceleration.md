@@ -14,12 +14,17 @@ I have been reading Georgie Tolstov's book, [Fourier Series](https://www.amazon.
 
 ## Example 1
 Here is an example of the method in action, let’s say we want to accelerate the following series.
+
 $$f(x) = \sum_{n=1}^\infty \frac{(n^3-1)sin(nx)}{n^4}$$
 
 By splitting the Fourier coefficient function into the fast a slow converging parts we get the following.
+
 $$\frac{(n^3-1)}{n^4} = \frac{1}{n}-\frac{1}{n^4}$$
+
 $$f(x) = \sum_{n=1}^\infty \frac{sin(nx)}{n}-\sum_{n=1}^\infty \frac{sin(nx)}{n^4}$$
+
 We can substitute an identity for the first series and get a $\mathcal{O}(n^{-4})$ converging series instead of original $\mathcal{O}(n^{-1})$ converging series.
+
 $$f(x) = \frac{\pi - x}{2}-\sum_{n=1}^\infty \frac{sin(nx)}{n^4}$$
 
 ## Example 2
