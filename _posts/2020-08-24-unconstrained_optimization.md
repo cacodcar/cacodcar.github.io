@@ -153,6 +153,7 @@ $$\frac{\partial I}{\partial x}=0$$
 $$\frac{\partial I}{\partial x'}=\frac{x'(t)}{\sqrt{1+x'(t)}}$$
 
 substituting these back in
+
 $$ \frac{d}{dt}\frac{x'(t)}{\sqrt{1+x'(t)}} = 0 \rightarrow \frac{x'(t)}{\sqrt{1+x'(t)}} = c$$
 
 With a small amount of rearrangement we see that $x'(t)=\frac{c}{\sqrt{1-c^2}}$, in other words the function we are looking for is a straight line. I will leave the python code up to the reader :)
