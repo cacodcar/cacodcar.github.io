@@ -29,7 +29,7 @@ Here I will compute the ridge plot of a noisy model generated from a 4th order p
 
 And this is what the regressed functions look like as you change the lambda parameter.
 
-![](/assets/img/rr_active.gif)
+![](/assets/imgs/rr_active.gif)
 
 ```python
 
