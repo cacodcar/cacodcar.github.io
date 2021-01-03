@@ -7,7 +7,7 @@ category:
   - Blog
 ---
 
-I have been on a regression kick in the last few days. We have talked about multiple different classes of min norm problems, ridge regression and least squares, now we will talk about some methods to solve nonlinear least squares problems, aka nonlinear regression. In the previous methods, there was an assumption that the output variables were a linear function of out parameters, and that isn't always the case. Population dynamics and demand response functions are usually nonlinear and and it is important to capture that information. 
+I have been on a regression kick in the last few days. We have talked about multiple different classes of min norm problems, ridge regression and least squares, now we will talk about some methods to solve nonlinear least squares problems, aka nonlinear regression. In the previous methods, there was an assumption that the output variables were a linear function of input parameters, and that isn't always the case. Population dynamics and demand response functions are usually nonlinear and and it is important to capture that information. 
 
 The Gauss-Newton Algorithm and it's spirit child the Levenberg-Marquardt Algorithm are some of the most well-known methods to solve these problem and they are incredibly powerful tools to have in one's toolbox. The central premise of both algorithms is to repeatedly linearize the current point, approximate the local curvature of the function, find the minimum of the approximate function then move to that point. This process repeats over and over again until the parameters converge. 
 
