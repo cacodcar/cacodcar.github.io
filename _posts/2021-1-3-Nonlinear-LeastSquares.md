@@ -1,8 +1,8 @@
 ---
 layout: post
 mathjax: true
-title: Applications of Optimization - NonLinear Regression
-date: 2020-12-30
+title: Applications of Optimization - Nonlinear Regression
+date: 2021-1-3
 category:
   - Blog
 ---
