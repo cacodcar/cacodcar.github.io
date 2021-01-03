@@ -13,18 +13,18 @@ As a case study I will look at speeding up the gradient for ridge regression. Ri
 
 $$\min_x f(x) = ||y - Ax||^2 - \lambda ||x||^2$$
 
-$$\nabda f(x) = -2A^T(y - Ax)+2\lambda x$$
+$$\nabla f(x) = -2A^T(y - Ax)+2\lambda x$$
 
 We can see in the gradient expression there are multiple matrix operations that are dependent on each other, before the outer matrix multiplication can begin the inner matrix multiplication has to finish and this quite cache inefficient, as in we are loading in data form memory and throwing it away before we use it again for the outer loop. There is a way that we can ger around this problem, if we precompute some quantities then we can see a speed up from just data over head. We just need to factor it out.
 
 $$N = -2A^Ty$$
 $$M = 2(A^TA+\lambda \mathcal{I})$$
 
-$$nabda f(x) = -2A^T(y - Ax)+2\lambda x$$
+$$\nabla  f(x) = -2A^T(y - Ax)+2\lambda x$$
 
-$$nabda f(x) = -2A^Ty +2(A^TAx+\lambda \mathcal{I}) x$$
+$$\nabla  f(x) = -2A^Ty +2(A^TAx+\lambda \mathcal{I}) x$$
 
-$$nabda f(x) = B + Mx$$
+$$\nabla  f(x) = B + Mx$$
 
 In python this is written as the following. 
 
