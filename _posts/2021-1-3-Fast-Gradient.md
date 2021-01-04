@@ -15,9 +15,9 @@ $$\min_x f(x) = ||y - Ax||^2 - \lambda ||x||^2$$
 
 $$\nabla f(x) = -2A^T(y - Ax)+2\lambda x$$
 
-We can see in the gradient expression there are multiple matrix operations that are dependent on each other, before the outer matrix multiplication can begin the inner matrix multiplication has to finish and this quite cache inefficient, as in we are loading in data form memory and throwing it away before we use it again for the outer loop. There is a way that we can ger around this problem, if we precompute some quantities then we can see a speed up from just data over head. We just need to factor it out.
+We can see in the gradient expression there are multiple matrix operations that are dependent on each other. The outer multiplicaition by $A^T$ cannot start before the residual term $y - Ax$ is calculated and for various reasons this quite inefficient. Primarily due to the multiple multiplications by the same matrix in the expression, we are loosing out on data reuse (peices of the matrix get loaded in from main memory only once).  With the fact we are doing multiple operations and have performance degridation from intermediates. There is a way that we can ger around this problem, if we precompute some quantities then we can see a speed up by removing expensive temperaries and poor data use. We just need to factor it out.
 
-$$N = -2A^Ty$$
+$$B = -2A^Ty$$
 $$M = 2(A^TA+\lambda \mathcal{I})$$
 
 $$\nabla  f(x) = -2A^T(y - Ax)+2\lambda x$$
@@ -28,7 +28,7 @@ $$\nabla  f(x) = B + Mx$$
 
 In python this is written as the following. 
 
-```
+```python
 
 def textbook_grad(x, lambda_):
   return -2*A.T@(y - A@x)+2*lambda*x
@@ -37,6 +37,9 @@ def informed_grad(x, lambda_):
   return M@x+B
 
 ```
+
+The time complexity of textbook formula is $\mathcal{O}(nm + mn + n + m)~\mathcal{O}(2nm)$, where as the improved formula is $\mathcal{O}(m^2 + m)~\mathcal{O}(m^2)$, in the case that $m < n$ then we would have an asymptotic speed up of $~2n/m$. But due to the chache structure of the cpu, reducing the memory foodprint of the matrices required to calculate the gradient can massively increase the performance (e.g. everthing fitting into L2 vs L3 cache). 
+
 
 Now these terms do have to be precomputed at the start but in my experience this is inconsequential. For a matrix A for size n by m, the asymptotic complexity of creating these is $\mathcal{O}(nm^2)$, where n is the number of observations and m is the number of features. While by the asymptotic analysis might look detrimental, for systems of practical size (n < ~20,000 and m <  ~1000) this system makes sense, I will cover this momentarily. These sort of constraints on the systems cover many practical problems in engineering, science, and statistics.
 
