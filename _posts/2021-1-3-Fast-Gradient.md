@@ -38,7 +38,7 @@ def informed_grad(x, lambda_):
 
 ```
 
-The time complexity of textbook formula is $\mathcal{O}(nm + mn + n + m)~\mathcal{O}(2nm)$, where as the improved formula is $\mathcal{O}(m^2 + m)~\mathcal{O}(m^2)$, in the case that $m < n$ then we would have an asymptotic speed up of $~2n/m$. But due to the chache structure of the cpu, reducing the memory foodprint of the matrices required to calculate the gradient can massively increase the performance (e.g. everthing fitting into L2 vs L3 cache). 
+The time complexity of textbook formula is $\mathcal{O}(nm + mn + n + m) \approx \mathcal{O}(2nm)$, where as the improved formula is $\mathcal{O}(m^2 + m) \approx \mathcal{O}(m^2)$, in the case that $m < n$ then we would have an asymptotic speed up of $~2n/m$. But due to the chache structure of the cpu, reducing the memory foodprint of the matrices required to calculate the gradient can massively increase the performance (e.g. everthing fitting into L2 vs L3 cache). 
 
 
 Now these terms do have to be precomputed at the start but in my experience this is inconsequential. For a matrix A for size n by m, the asymptotic complexity of creating these is $\mathcal{O}(nm^2)$, where n is the number of observations and m is the number of features. While by the asymptotic analysis might look detrimental, for systems of practical size (n < ~20,000 and m <  ~1000) this system makes sense, I will cover this momentarily. These sort of constraints on the systems cover many practical problems in engineering, science, and statistics.
