@@ -25,11 +25,11 @@ $$\text{s.t. } A^Ty \leq b^T$$
 
 $$y\geq 0$$
 
-However, the dual of other functions is not necessarily so easy to see and calculate. What we will be covering today is solving the conjugate function otherwise known as the Frenchel dual of a differentiable convex function. The assumptions of convex and differentiable make the solution process a lot friendlier but these types of functions are not the only functions with conjugate functions. The definition of a conjugate function is as follows. Let $ \textbf{X} $ be a normed space and let $ \textbf{X}^* $ be it is dual.
+However, the dual of other functions is not necessarily so easy to see and calculate. We will be covering today to solve the conjugate function, otherwise known as the Frenchel dual of a differentiable convex function. The convex and differentiable assumptions make the solution process a lot friendlier, but these types of functions are not the only functions with conjugate functions. The definition of a conjugate function is as follows. Let $ \textbf{X} $ be a normed space and let $ \textbf{X}^* $ be it is dual.
 
 $$f^* (\zeta) = \sup_{x\in X}\{\langle \zeta,x\rangle - f(x)\}$$
 
-Now this can look more than a little intimidating, but it is not actually that bad. If we restrict ourselves a little more for the next example, to $\mathcal{R}$ then we can clearify it. If $\textbf{X} = \mathcal{R}^n$ then $\textbf{X}^* = \mathcal{R}^n$, and the inner product for this space becomes $\zeta^Tx$. For $n=1$ the inner product is just multiplication. The fist part of the process is determining the domain of the dual and the second part is calculating the values of the conjugate functional on that range. Examples 1,2, and 3 are taken from Boyd's Convex optimization book.
+Now, this can look more than a little intimidating, but it is not actually that bad. If we restrict ourselves a little more for the next example, to $\mathcal{R}$, we can clarify it. If $\textbf{X} = \mathcal{R}^n$ then $\textbf{X}^* = \mathcal{R}^n$, and the inner product for this space becomes $\zeta^Tx$. For $n=1$, the inner product is just multiplication. The first part of the process is determining the dual, and the second part is calculating the domain of the conjugate function. Examples 1, 2, and 3 are taken from Boyd's Convex optimization book.
 
 ## Example 1
 
@@ -37,7 +37,7 @@ $$f(x) = ax+b$$
 
 $$f^*(\zeta) = \sup_{x\in\mathcal{R}}\{\zeta x - f(x)\} = \sup_{x\in\mathcal{R}}\{\zeta x - ax+b\}$$
 
-We can see that $f^* $ becomes unbounded for any $\zeta\neq a$, so The domain of the conjugate function $f^* $ is just $\{a\}$ and $f^* (a) = -b$
+We can see that $f^* $ becomes unbounded for any $\zeta\neq a$, so The domain of the conjugate function $f^* $ is just $\{a\}$ and $f^* (a) = -b$.
 
 ## Example 2
 
@@ -45,7 +45,7 @@ $$f(x) = -\log(x)$$
 
 $$f* (\zeta) = \sup_{x\in\mathcal{R}}\{\zeta x - f(x)\} = \sup_{x\in\mathcal{R}}\{\zeta x + \log(x)\}$$
 
-if $\zeta > 0$ we can just increase $x$ arbitrarilly and have an unbounded function, so $\zeta<0$ and using simple calculus to maximize the expresstion we get
+If $\zeta > 0$ we can increase $x$ arbitrarily and have an unbounded function, so $\zeta<0$ and using simple calculus to maximize the expression we get
 
 $$\frac{\partial}{\partial x} \left(\zeta x + \log(x) \right) = 0 \rightarrow \zeta + \frac{1}{x} = 0 \rightarrow x = \frac{-1}{\zeta}$$
 
@@ -62,7 +62,7 @@ We can see that the internal function is bounded above for all $\zeta$, so the r
 
 $$\frac{\partial}{\partial x} \left(\zeta^Tx - \frac{1}{2}x^TQx\right) = 0 \rightarrow \zeta + Qx= 0 \rightarrow x = Q^{-1}\zeta$$
 
-by plugging this back into the definition we have the the following
+plugging this back into the definition, we have the following
 
 $$f^* (\zeta) = \zeta^TQ^{-1}\zeta - \frac{1}{2}(Q^{-1}\zeta)^TQQ^{-1}\zeta = \frac{1}{2}\zeta^TQ^{-1}\zeta$$
 
