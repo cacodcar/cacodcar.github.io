@@ -7,9 +7,9 @@ category:
   - Blog
 ---
 
-Picard Iteration is a neet method I stumbled across today. It is an iterative method coming from fixed-point theory to solve an inital value problem symbolically. 
+Picard Iteration is a neet method I stumbled across today. It is an iterative method coming from fixed-point theory to solve an initial value problem symbolically. 
 
-The theory behind it is direct and straitforward. Given an IVP of the following form
+The theory behind it is direct and straightforward. Given an IVP of the following form
 
 $$y'(x) = f(x,y(x)),y(x_0)=y_0$$
 
@@ -17,7 +17,7 @@ We can integrate both sides and manipulate to get
 
 $$y(x)-y(x_0) = \int_{x_0}^{x}{f(x,y(x))dx} \rightarrow  y(x)= y(x_0) +\int_{x_0}^{x}{f(x,y(x))dx}$$
 
-With this expression, we can inject an initial guess and iterativley solve
+With this expression, we can inject an initial guess and iteratively solve
 
 $$\phi_0(x) = y_0$$
 
@@ -30,7 +30,7 @@ The equation this example is the following
 
 $$y'(x) = -y(x), y(0) = 1$$
 
-The following recurance relation can be made
+The following recurrence relation can be made
 
 $$\phi_0(x) = y_0$$
 
@@ -50,7 +50,7 @@ $$\lim_{n\to\infty}{\phi_n(x)} =  \sum_{k=0}^{\infty}\frac{(-1)^{k}x^k}{k!} = e^
 
 This is the correct answer!
 
-Of course doing this by hand is tedious and error prone, so we should do it with code. 
+Of course, doing this by hand is tedious and error-prone, so we should do it with code. 
 
 ```python 
 def picard_solver(y_0, x_0, rhs_expression, iteration_count:int = 5):
@@ -76,13 +76,13 @@ $$\phi_0(x) = y_0$$
 
 $$\phi_{i+1}(x) = y_0 -\int_{x_0}^{x}{\phi_i(x)*(1-\phi_i(x))}$$
 
-We can solve this by plugging our parameters into the picard_solver funtion
+We can solve this by plugging our parameters into the picard_solver function
 
 ```python
 y = picard_solver(0,.2, lambda x, y: -y*(1-y), n = 5)
 ```
 
-And then compare against the known solution. I used plotly to create an interactive graph so please zoom in and find the differences between the picard and exact solutions. (hint: look at the edges).
+And then compare against the known solution. I used Plotly to create an interactive graph, so please zoom in and find the differences between the Picard and exact solutions. (hint: look at the edges).
 
 ```python
 import numpy 
@@ -115,7 +115,3 @@ fig.write_html("picard_vs_exact.html")
 ```
 
 {% include picardvsexact.html %}
-
-
-
-
