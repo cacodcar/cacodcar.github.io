@@ -24,10 +24,10 @@ Running Monti Carlo simulations rely on the fast generation of (and hopefully hi
 |    Bob's PRNG   |      984     |
 |     Salsa20     |     14853    |
 
+We can see that Salsa20 is by far the slowest. This is a cryptographically secure algorithm meant for excellent statistical quality and data security instead of speed. LCG is the fastest on the list, but it is also the worst statistically. In practice, Xorshift128(+) is an excellent default algorithm.
 
-We can see that Salsa20 is by far the slowest, this is do it being a cryptographically secure algorithm meant for excellent statistical quality and data security instead of speed. We can see that the LCG is the fastest in the list but it is also the statistically the worst out of all of them. In practice, Xorshift128(+) is a perfectly fine default algorithm.
+To run the experiment on your machine, compile, and run the following.
 
-To run experiment on your machine compile and run the following
 ```cpp
 #include"rng.h"
 #include<iostream>
