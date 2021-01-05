@@ -7,9 +7,9 @@ category:
   - Blog
 ---
 
-I have been doing some monte-carlo recently, and I wanted to show the differences in performance between native python code, fully parallel compiled numpy code, and unoptimized gpu cuda code running the cupy package. Part of what makes python so powerfull is the ability to tap into these resources without having to change to many things (as you will see in the code example).
+I recently did some Monte-Carlo, and I wanted to show the differences in performance between native python code, fully parallel compiled Numpy code, and unoptimized GPU Cuda code running the cupy package. Part of what makes python so powerful is the ability to tap into these resources without changing too many things (as you will see in the code example).
 
-I am going to use the standard estimation of pi as a benchmark of performance. This problem is defined by the following
+I am going to use the standard estimation of pi as a benchmark of performance. This problem is defined by the following.
 
 $$\pi = \lim_{n\to\infty}{ 4 \frac{count(x^2 +y^2 < 1)}{N}}$$
 
@@ -23,9 +23,9 @@ I will show the code at the end, but I just want to show the results here. (8600
 | Numba  |     10 Billion    |   20.5   |          488          |
 | Cuda   |     10 Billion    |     7    |          1428         |
 
-By leveraging the thousands of streaming processors on the gpu, we are able to get an incredible speed up in out task.
+By leveraging the thousands of streaming processors on the GPU, we can get an incredible speed up in our task.
 
-I will show another example of the difference, solving a linear system of 20,000 variables in numpy(CPU) and in cupy(GPU). We will see a massive difference in performance between using fp32 (float) and fp64 (double). This is due to the physical harware having more fp32 alu cores.
+I will show another example of the difference, solving a linear system of 20,000 variables in NumPy(CPU) and cupy(GPU). We will see a massive difference in performance between fp32 (float) and fp64 (double). This is due to the physical hardware having more fp32 alu cores.
 
 | Method     |  Size | Time (s) |
 |------------|:-----:|:--------:|
