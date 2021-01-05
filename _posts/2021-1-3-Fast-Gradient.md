@@ -1,7 +1,7 @@
 ---
 layout: post
 mathjax: true
-title: Optimizaing Optimization - Faster Gradients
+title: Optimizing Optimization - Faster Gradients
 date: 2021-1-4
 category:
   - Blog
