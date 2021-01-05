@@ -7,11 +7,11 @@ category:
   - Blog
 ---
 
-I have been on a regression kick in the last few days. We have talked about multiple different classes of min norm problems, ridge regression and least squares, now we will talk about some methods to solve nonlinear least squares problems, aka nonlinear regression. In the previous methods, there was an assumption that the output variables were a linear function of input parameters, and that isn't always the case. Population dynamics and demand response functions are usually nonlinear and and it is important to capture that information. 
+I have been on a regression kick in the last few days. We have talked about multiple different classes of min norm problems, ridge regression, and least squares, now we will talk about some methods to solve nonlinear least-squares problems, aka nonlinear regression. In the previous methods, there was an assumption that the output variables were a linear function of input parameters, which isn't always the case. Population dynamics and demand response functions are usually nonlinear, and it is important to capture that information.
 
-The Gauss-Newton Algorithm and it's spirit child the Levenberg-Marquardt Algorithm are some of the most well-known methods to solve these problem and they are incredibly powerful tools to have in one's toolbox. The central premise of both algorithms is to repeatedly linearize the current point, approximate the local curvature of the function, find the minimum of the approximate function then move to that point. This process repeats over and over again until the parameters converge. 
+The Gauss-Newton Algorithm and its spirit child, the Levenberg-Marquardt Algorithm, are some of the most well-known methods to solve this problem, and they are potent tools to have in one's toolbox. The central premise of both algorithms is to repeatedly linearize the current point, approximate the local curvature of the function, find the minimum of the approximate function then move to that point. This process repeats over and over again until the parameters converge.
 
-I will not derive the equations, here but the Gauss-Newton (GN) Algorithm and the Levenberg-Marquardt (LM) Algorithm differ only in one term in the iterate. The $\lambda$ term is effectively a tradeoff term between GN and Gradient Decent (GD), as $\lambda$ increases the steps that LM takes converge to the steps that GD takes. This adds a robustness to the method, at the expense of some speed (this is usually not a problem). The iterates have the following appearances, where we solve the linear systems to get the step. (Here I am using Fletcher’s refinement of LM to make the solution scale invariant.)
+I will not derive the equations, but the Gauss-Newton (GN) Algorithm and the Levenberg-Marquardt (LM) Algorithm differ only in one term in the iterate. The $\lambda$ term is effectively a tradeoff term between GN and Gradient Decent (GD); as $\lambda$ increases, the steps that LM takes converge to the steps GD takes. This adds robustness to the method, at the expense of some speed (this is usually not a problem). The iterates have the following appearances, where we solve the linear systems to get the step. (Here, I am using Fletcher's refinement of LM to make the solution scale-invariant.)
 
 
 $$(J^TJ)\delta_{GN} =J^T(y - \^{y}) $$
@@ -20,7 +20,7 @@ $$(J^TJ + \lambda diag(J^TJ)) \delta_{LM} =J^T(y - \^{y})$$
 
 $$x^{i+1} = x^i + \delta$$
 
-I will give an example of this in action, using GN, and LM on a relatively simple model.  We have some data for the population change as a function of time and we want to fit the following nonlinear model to it.
+I will give an example of this in action, using GN and LM on a relatively simple model.  We have some data for the population change as a function of time, and we want to fit the following nonlinear model to it.
 
 |    Time    |  Population  |
 |:----------:|:------------:|
@@ -42,7 +42,7 @@ $$\frac{\partial r_i}{\partial \beta_0} = e^{\beta_1 x}$$
 $$\frac{\partial r_i}{\partial \beta_0} = \beta_0 x e^{\beta_1 x}$$
 
 
-With a starting guess of $\beta_0 = 8.3, \beta_1 = .3$ we converge to the solution in only 7 iterations with $\lambda = 0$. Since we are already near the optimal parameters the LM algorithm's added stability is not shown here, but we can see that if we increase the LM parameter that the number of iterations needed to converge rapidly increases. 
+With a starting guess of $\beta_0 = 8.3, \beta_1 = .3$ we converge to the solution in only 7 iterations with $\lambda = 0$. Since we are already near the optimal parameters, the LM algorithm's added stability is not shown here, but we can see that if we increase the LM parameter, the number of iterations needed to converge rapidly increases. 
 
 
 Of course the python code is included.
