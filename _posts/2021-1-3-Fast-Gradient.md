@@ -18,6 +18,7 @@ $$\nabla f(x) = -2A^T(y - Ax)+2\lambda x$$
 We can see in the gradient expression there are multiple matrix operations that are dependent on each other. The outer multiplicaition by $A^T$ cannot start before the residual term $y - Ax$ is calculated and for various reasons this quite inefficient. Primarily due to the multiple multiplications by the same matrix in the expression, we are loosing out on data reuse (peices of the matrix get loaded in from main memory only once).  With the fact we are doing multiple operations and have performance degridation from intermediates. There is a way that we can ger around this problem, if we precompute some quantities then we can see a speed up by removing expensive temperaries and poor data use. We just need to factor it out.
 
 $$B = -2A^Ty$$
+
 $$M = 2(A^TA+\lambda \mathcal{I})$$
 
 $$\nabla  f(x) = -2A^T(y - Ax)+2\lambda x$$
