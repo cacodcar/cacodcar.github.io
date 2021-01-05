@@ -6,15 +6,15 @@ date: 2020-11-30
 category:
   - Blog
 ---
-I have been writting a solver that makes heavy use of Numpy. Due error checking and other overhead in numpy we can avoid these costs. In a situation were one needs to compose hundreds of millions of matrices can cause performance issues.
+I have been writing a solver that makes heavy use of Numpy. Due to error checking and other overhead in NumPy, we can avoid these costs. In a situation where one needs to compose hundreds of millions of matrices can cause performance issues.
 
-I am compairing 3 different classes of matrix blocking
+I am comparing 3 different classes of matrix blocking.
 
-* Blocking many single row matrices into one matrix
+* Blocking many single-row matrices into one matrix
 * Large matrix composition
 
 
-As you can see that the epecialized varsion of numpy matrix blocking is approximatly 2 to 3 times faster!
+As you can see that the specialized version of NumPy matrix blocking is approximately 2 to 3 times faster!
 
 |                |   Custom  |   Numpy  |
 |----------------|:---------:|:--------:|
@@ -23,7 +23,8 @@ As you can see that the epecialized varsion of numpy matrix blocking is approxim
 
 
 
-This can be run using the following script, try it out on your computer!
+This can be run using the following script. Try it out on your computer!
+
 ```python
 import numpy
 row = numpy.array([[i] for i in range(10)])
