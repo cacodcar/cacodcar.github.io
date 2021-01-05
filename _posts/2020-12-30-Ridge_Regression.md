@@ -7,7 +7,7 @@ category:
   - Blog
 ---
 
-Ridge regression is a variation of least squares, in that it adds a penalty to having large parameter values. This penalty is tunable and will change the model bias-variance trade off. For a linear unconstrained ridge regression, the objective takes the following form, where both norms are taken in the l2 sense.
+Ridge regression is a variation of least squares in that it adds a penalty to having large parameter values. This penalty is tunable and will change the model bias-variance trade-off. For a linear unconstrained ridge regression, the objective takes the following form: both norms are taken in the l2 sense.
 
 $$\min_x f(x) = ||y - Ax||^2 + \lambda ||x||$$
 
@@ -21,13 +21,13 @@ $$\nabla f(x) = -2 A^T(y - Ax) + 2\lambda \mathcal{I} x = 0$$
 
 $$(A^T A + \lambda \mathcal{I}) x = A^Ty$$
 
-If you specify a nonzero $\lambda$ this system is always invertible, therefore we always have a unique solution. This linear system can be solved quite efficiently with modern BLAS packages. But in general, solving linear systems has a time complexity of $\mathcal{O}(n^3)$ where n is the dimensionality of the number of parameters. For systems of less than a few thousand examples however, this is not a difficult task. Since, we have an expression for the gradient we can also employ a host of interactive unconstrained optimization methods without numerical approximation to tackle this problem, such as gradient decent and conjugate gradient methods. I will not be writing the code for that here but in a future post I will compare various gradient decent algorithms using this as a test problem. 
+If you specify a nonzero $\lambda$, this system is always invertible; therefore, we always have a unique solution. Modern BLAS packages can solve this linear system quite efficiently. But in general, solving linear systems has a time complexity of $\mathcal{O}(n^3)$ where n is the dimensionality of the number of parameters. For systems of less than a few thousand examples, however, this is not a difficult task. Since we have an expression for the gradient, we can also employ a host of interactive unconstrained optimization methods without numerical approximation to tackle this problem, such as gradient descent and conjugate gradient methods. I will not be writing the code for that here, but I will compare various gradient descent algorithms using this as a test problem in a future post. 
 
-Here I will compute the ridge plot of a noisy model generated from a 4th order polynomial, to show the effect that the $\lambda$ parameters have on the regressed parameters. I am including all of the python 3.7 code required to generate these plots at the bottom.
+Here I will compute the ridge plot of a noisy model generated from a 4th order polynomial to show how the $\lambda$ parameters have on the regressed parameters. I included all of the python 3.7 code required to generate these plots at the bottom.
 
 ![](/assets/imgs/ridgeregression.png)
 
-And this is what the regressed functions look like as you change the lambda parameter.
+And this is what the regressed functions look like as you change the $\lambda$ parameter.
 
 ![](/assets/imgs/rr_active.gif)
 
@@ -62,6 +62,7 @@ plt.legend( [rf'$\beta_{i}$' for i in range(5)])
 ```
 
 And here is the code to generate the gif
+
 ```python
 import gif
 
