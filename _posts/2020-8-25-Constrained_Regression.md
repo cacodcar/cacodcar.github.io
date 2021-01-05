@@ -34,7 +34,7 @@ $$
 \end{align*}
 $$
 
-It can be solved by solving the original system or some manipulations can be made that rapidly accelerate this process.
+The optimization problem can be solved by solving the original system or some manipulations can be made that rapidly accelerate this process.
 
 Here is the source code for the naive version in Python 3.7 and NumPy.
 
@@ -90,5 +90,5 @@ def min_norm_informed(C:numpy.ndarray, d:numpy.ndarray, return_multipliers:bool 
 
 ```
 
-This is much faster than the naive version as it solves a much smaller system of equations. For example, with 100 constraints and 1000 dimensions the informed version ran 80x faster than the naive version (.24 ms vs 19.3 ms).
+This is much faster than the naive version as it solves a much smaller system of equations. For example, with 100 constraints and 1000 dimensions, the informed version ran 80x faster than the naive version (.24 ms vs. 19.3 ms).
 
