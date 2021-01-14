@@ -14,9 +14,9 @@ The Gauss-Newton Algorithm and its spirit child, the Levenberg-Marquardt Algorit
 I will not derive the equations, but the Gauss-Newton (GN) Algorithm and the Levenberg-Marquardt (LM) Algorithm differ only in one term in the iterate. The $\lambda$ term is effectively a tradeoff term between GN and Gradient Decent (GD); as $\lambda$ increases, the steps that LM takes converge to the steps GD takes. This adds robustness to the method, at the expense of some speed (this is usually not a problem). The iterates have the following appearances, where we solve the linear systems to get the step. (Here, I am using Fletcher's refinement of LM to make the solution scale-invariant.)
 
 
-$$(J^TJ)\delta_{GN} =J^T(y - \^{y}) $$
+$$(J^TJ)\delta_{GN} =J^T(y - \hat{y}) $$
 
-$$(J^TJ + \lambda diag(J^TJ)) \delta_{LM} =J^T(y - \^{y})$$
+$$(J^TJ + \lambda diag(J^TJ)) \delta_{LM} =J^T(y - \hat{y})$$
 
 $$x^{i+1} = x^i + \delta$$
 
