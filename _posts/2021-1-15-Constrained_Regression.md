@@ -1,0 +1,130 @@
+---
+layout: post
+mathjax: true
+title: Particle Swarm Optimization
+date: 2020-01-15
+category:
+  - Blog
+---
+
+This post will talk about particle swarm optimization. This technique is usually used to solve non-convex optimization problems where one does not have the objective function in closed form. Particle swarm optimization is a relatively simple technique that is based on the flock dynamics of birds. The algorithm is relatively simple in that We generate a swarm of particles in the domain then make them swarm towards the 'best bird.' While each particle in the swarm is directed to go towards the best particle in the swarm and the 'best position' location, it also has a search for the local space along the way. The following gif from Wikipedia gives a visual overview of what is happening. 
+
+![](https://upload.wikimedia.org/wikipedia/commons/e/ec/ParticleSwarmArrowsAnimation.gif)
+
+I have implemented the basic PSO algorithm in python 3.7 here. This is not meant to be fast but explain the individual parts. The last 4 parameters are hyperparameters and can be tuned to the specific problem at hand. This can be altered to include constraints and other features.
+
+```python
+
+def PSO_numpy(f, n_particles, lower, upper, max_iter = 100, w = .9, phi_1 = .3, phi_2 = .5, learning_rate = .1):
+    
+    bounds_range = upper - lower
+    
+    best_particle_obj = float('inf')
+    best_swarm_obj = float('inf') 
+    
+    best_particle_index = -1
+    best_swarm_location = 0*upper
+    
+    n_dims = lower.size
+    
+    particles = numpy.zeros((n_particles, n_dims))
+    velocities = numpy.zeros((n_particles, n_dims))
+    
+    #initialize the particles
+    
+    for i in range(n_particles):
+        particles[i] = numpy.random.uniform(lower, upper)
+        velocities[i] = numpy.random.uniform(-bounds_range, bounds_range)
+        
+        p_obj = f(particles[i])
+        
+        if p_obj < best_particle_obj :
+            best_particle_index = i
+            best_particle_obj = p_obj
+            best_swarm_obj = p_obj
+            best_swarm_location = particles[i].copy()
+        
+    for i in range(max_iter):
+        
+        for p in range(n_particles):
+            
+            r_p = numpy.random.rand(n_dims)
+            r_g = numpy.random.rand(n_dims) 
+            
+            velocities[p] = w*velocities[p] + phi_1*r_p*(particles[best_particle_index] - particles[p]) + phi_2*r_g*(best_swarm_location - particles[p]) + ()
+            
+            particles[p] = particles[p] + learning_rate*velocities[p]
+            
+            particle_obj = f(particles[p])
+            
+            if particle_obj < best_particle_obj:
+                
+                best_particle_obj = particle_obj
+                best_particle_index = p
+                
+                if particle_obj < best_swarm_obj:
+                    
+                    best_swarm_location = particles[p].copy()
+                    best_swarm_obj = particle_obj
+        
+    return best_swarm_location, best_swarm_obj
+
+```
+
+One of the larges packages for the python ecosystem is Pyswarm. It is a good package with many different PSO algorithms implemented not only for a continuous problem but also for discrete problems, such as integer optimization. Here is an example from the page https://pythonhosted.org/pyswarm/ where we are trying to optimize an A-frame truss. 
+
+```python
+
+import numpy as np
+from pyswarm import pso
+
+# Define the objective (to be minimize)
+def weight(x, *args):
+    H, d, t = x
+    B, rho, E, P = args
+    return rho*2*np.pi*d*t*np.sqrt((B/2)**2 + H**2)
+
+# Setup the constraint functions
+def yield_stress(x, *args):
+    H, d, t = x
+    B, rho, E, P = args
+    return (P*np.sqrt((B/2)**2 + H**2))/(2*t*np.pi*d*H)
+
+def buckling_stress(x, *args):
+    H, d, t = x
+    B, rho, E, P = args
+    return (np.pi**2*E*(d**2 + t**2))/(8*((B/2)**2 + H**2))
+
+def deflection(x, *args):
+    H, d, t = x
+    B, rho, E, P = args
+    return (P*np.sqrt((B/2)**2 + H**2)**3)/(2*t*np.pi*d*H**2*E)
+
+def constraints(x, *args):
+    strs = yield_stress(x, *args)
+    buck = buckling_stress(x, *args)
+    defl = deflection(x, *args)
+    return [100 - strs, buck - strs, 0.25 - defl]
+
+# Define the other parameters
+B = 60  # inches
+rho = 0.3  # lb/in^3
+E = 30000  # kpsi (1000-psi)
+P = 66  # kip (1000-lbs, force)
+args = (B, rho, E, P)
+
+# Define the lower and upper bounds for H, d, t, respectively
+lb = [10, 1, 0.01]
+ub = [30, 3, 0.25]
+
+xopt, fopt = pso(weight, lb, ub, f_ieqcons=constraints, args=args)
+
+# The optimal input values are approximately
+#     xopt = [29, 2.4, 0.06]
+# with function values approximately
+#     weight          = 12 lbs
+#     yield stress    = 100 kpsi (binding constraint)
+#     buckling stress = 150 kpsi
+#     deflection      = 0.2 in
+
+```
