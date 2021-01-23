@@ -7,7 +7,7 @@ category:
   - Blog
 ---
 
-The optimal approximation is finding an approximate function that minimizes some objective function based on the difference between your original and approximate function. This can be stated as a min-max problem. This post will look at the following optimization problem: we are looking for the $n^th$ order polynomial that minimizes the maximum error. This is typically called the 'best polynomial approximation,' but what is optimal depends on the metric you are judging something by.
+The optimal approximation is finding an approximate function that minimizes some objective function based on the difference between your original and approximate function. This can be stated as a min-max problem. This post will look at the following optimization problem: we are looking for the $n^{th}$ order polynomial that minimizes the maximum error. This is typically called the 'best polynomial approximation,' but what is optimal depends on the metric you are judging something by.
 
 $$\min_{P\in\mathcal{P}^n} \max_{-1\leq x\leq 1} |F(x) - P(x)|$$
 
