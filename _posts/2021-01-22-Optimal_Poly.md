@@ -21,9 +21,9 @@ The typical algorithm used to solve these problems is the [Remez Algorithm](http
 
 3. Reset $K$ to the local extreme points of the residual function.
 
-The theoretical basis for this algorithm is from the [Equioscillation theorem](https://web.archive.org/web/20110702221651/http://www.math.uiowa.edu/~jeichhol/qual%20prep/Notes/cheb-equiosc-thm_2007.pdf), that effectively states if $P$ is the optimum then there must be $n+2$ points of alternating sign where $|F(x_i) - P(x_i)| = |F(x_j) - P(x_j)|$. The following plot is the error, $F(x) - P(x)$, of the best $4^{th}$ order polynomial approximation of $e^x$. Here we can see that the largest values are attained 6 times and of equal magnitude. This is where intuition on the $E$ term in the above algorithm comes, in, otherwise this algorithm has the appearance of ordinary least squares.
+The theoretical basis for this algorithm is from the [Equioscillation theorem](https://web.archive.org/web/20110702221651/http://www.math.uiowa.edu/~jeichhol/qual%20prep/Notes/cheb-equiosc-thm_2007.pdf), that effectively states if $P$ is the optimum then there must be $n+2$ points of alternating sign where $abs(F(x_i) - P(x_i)) = (F(x_j) - P(x_j))$. The following plot is the error, $F(x) - P(x)$, of the best $4^{th}$ order polynomial approximation of $e^x$. Here we can see that the largest values are attained 6 times and of equal magnitude. This is where intuition on the $E$ term in the above algorithm comes, in, otherwise this algorithm has the appearance of ordinary least squares.
 
-![](https://github.com/DKenefake/dkenefake.github.io/blob/master/assets/imgs/BA_exp_4.png)
+![](/assets/imgs/BA_exp_4.png)
 
 Now that we have the justifications out of the way, how do we actually do this? 
 
@@ -106,11 +106,11 @@ def concave_max(f, low, high):
 
 This gives us the extrema of the residual function. We update our points $K$ and then start back to step 1 if we do not terminate. An example of each step of this process can be seen below. The orange crosses are the initial points in $K$, the blue function is the residual, the red crosses are the brackets for the extrema, and the purple dots are the new extrema that we will use as $K$ for our next step.
 
-![](https://github.com/DKenefake/dkenefake.github.io/blob/master/assets/imgs/Step5.png)
+![](/assets/imgs/Step5.png)
 
 The python code that implements the Remez algorithm will be posted below (the extrema at the endpoints are not being calculated properly, I made a simplifying assumption that is not necessarily true. You have been warned). Here I want to compare the $3^{rd}$ order best polynomial and a Taylor series of equal order centered at 0. We can see that the Taylor series is much more accurate in the neighborhood of 0 but is an order worse near the edges. This is contrasted with the best approximate's much more uniform error behavior. Most of the time, you would want to the behavior of the best approximate. 
 
-![](https://github.com/DKenefake/dkenefake.github.io/blob/master/assets/imgs/rem_tay.png)
+![](/assets/imgs/rem_tay.png)
 
 Here is the code dump. This can be modified to approximate functions over ranges other than $[-1,1]$ by scaling the initial points into that region.
 
