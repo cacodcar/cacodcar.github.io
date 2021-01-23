@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: Optimal Polynomial Approximation
-date: 2021-1-15
+date: 2021-1-22
 category:
   - Blog
 ---
