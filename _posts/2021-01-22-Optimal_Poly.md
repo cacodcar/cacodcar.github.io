@@ -21,7 +21,7 @@ The typical algorithm used to solve these problems is the [Remez Algorithm](http
 
 3. Reset $K$ to the local extreme points of the residual function.
 
-The theoretical basis for this algorithm is from the [Equioscillation theorem](https://web.archive.org/web/20110702221651/http://www.math.uiowa.edu/~jeichhol/qual%20prep/Notes/cheb-equiosc-thm_2007.pdf), that effectively states if $P$ is the optimum then there must be $n+2$ points of alternating sign where $abs(F(x_i) - P(x_i)) = (F(x_j) - P(x_j))$. The following plot is the error, $F(x) - P(x)$, of the best $4^{th}$ order polynomial approximation of $e^x$. Here we can see that the largest values are attained 6 times and of equal magnitude. This is where intuition on the $E$ term in the above algorithm comes, in, otherwise this algorithm has the appearance of ordinary least squares.
+The theoretical basis for this algorithm is from the [Equioscillation theorem](https://web.archive.org/web/20110702221651/http://www.math.uiowa.edu/~jeichhol/qual%20prep/Notes/cheb-equiosc-thm_2007.pdf) , that effectively states if $P$ is the optimum then there must be $n+2$ points of alternating sign where $abs(F(x_i) - P(x_i)) = abs(F(x_j) - P(x_j))$. The following plot is the error, $F(x) - P(x)$, of the best $4^{th}$ order polynomial approximation of $e^x$. Here we can see that the largest values are attained 6 times and of equal magnitude. This is where intuition on the $E$ term in the above algorithm comes, in, otherwise this algorithm has the appearance of ordinary least squares.
 
 ![](/assets/imgs/BA_exp_4.png)
 
@@ -51,12 +51,15 @@ A[:, n_degree+1] = E_array
 
 params = numpy.linalg.solve(A, b)
 coeffs = numpy.flip(params[:-1])
+
 ```
 
 The second step is creating the residual function $F(x) - P(x)$. This is simple with a lambda.
 
 ```python
+
 r_i = lambda x: func(x) - numpy.polyval(coeffs, x)
+
 ```
 
 The most complicated part of this process is step number 3, where we are trying to find our function's local extrema. This is itself a two-part process. In the first part, we must bracket the extrema. Since we know that our points ${x_i}$ are on alternating signs of our residual, then we know that there must be a point between them were our residual is equal to $0$. So we use root-finding to do so. Since I am not using any derivative information, I did a [bisection seach](https://en.wikipedia.org/wiki/Bisection_method) to find the zeros.
@@ -95,6 +98,7 @@ def bisection_search(f, low, high):
 Now that the extrema have been bracketed by a low and a high value, we can then find the extreme points. This is done with a central difference approximation to the derivative (since we still do not know what the derivatives are) and then bracketing the derivatives with the above bisection search.
 
 ```python 
+
 def concave_max(f, low, high):
     #create an approximate derivative expression
     scale = abs(high - low)
@@ -102,6 +106,7 @@ def concave_max(f, low, high):
     df = lambda x: (f(x + h) - f(x-h)) / (2.0*h)
 
     return bisection_search(df, low, high)
+    
 ```
 
 This gives us the extrema of the residual function. We update our points $K$ and then start back to step 1 if we do not terminate. An example of each step of this process can be seen below. The orange crosses are the initial points in $K$, the blue function is the residual, the red crosses are the brackets for the extrema, and the purple dots are the new extrema that we will use as $K$ for our next step.
