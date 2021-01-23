@@ -119,7 +119,8 @@ The python code that implements the Remez algorithm will be posted below (the ex
 
 Here is the code dump. This can be modified to approximate functions over ranges other than $[-1,1]$ by scaling the initial points into that region.
 
-```
+```python
+
 def remez(func, n_degree):
     
     #initialize the node points
