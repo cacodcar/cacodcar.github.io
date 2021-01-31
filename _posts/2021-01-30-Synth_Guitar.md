@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: Synthtic Guitar Strings - Kurplus-Strong Algorithm
-date: 2020-10-27
+date: 2021-01-30
 category:
   - Blog
 ---
