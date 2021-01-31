@@ -181,7 +181,7 @@ guitar = Instrament(notes, starts)
 music = guitar.compose()
 ```
 
-This composed piece of music can then be turned into a sound file, and this is the result. 
+This composed piece of music can then be turned into a sound file, and this is the result. WARNING LOUD!!!
 
 <audio controls="controls">
   <source type="audio/wav" src="/assets/imgs/KingW.wav"></source>
