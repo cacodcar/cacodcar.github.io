@@ -184,6 +184,6 @@ music = guitar.compose()
 This composed piece of music can then be turned into a sound file, and this is the result. 
 
 <audio controls="controls">
-  <source type="audio/wav" src="https://github.com/DKenefake/dkenefake.github.io/blob/master/assets/imgs/KingW.wav"></source>
+  <source type="audio/wav" src="/assets/imgs/KingW.wav"></source>
   <p>Your browser does not support the audio element.<p>
 </audio>
