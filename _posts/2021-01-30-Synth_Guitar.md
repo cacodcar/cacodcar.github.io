@@ -149,7 +149,7 @@ class Instrament:
 
 ```
 
-Now that all of that work is out of the way, We can FINALLY PLAY A SONG. I will pick 'Good King Wenceslas' as it is relatively simple and one of the first 'real' songs I learned when I was in band. This song wasn't really made for the guitar, but it never stopped a guitar player. I transcribed the notes from broadly available sheet music. While the song is out of copyright, specific compositions of it are copyrighted.
+Now that all of that work is out of the way, We can FINALLY PLAY A SONG. I will pick 'Good King Wenceslas' as it is relatively simple and one of the first 'real' songs I learned when I was in band. This song wasn't really made for the guitar, but that never stopped a guitar player. I transcribed the notes from broadly available sheet music. While the song is out of copyright, specific compositions of it are copyrighted.
 
 Here 'no' is a helper function that maps the note names and beat duration to a Note object with the associate frequency. There seems to be a problem with the frequency in this table. As you can hear in the last segment of the song, the C->B->A transition doesn't sound quite right.
 
