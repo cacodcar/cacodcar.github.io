@@ -7,13 +7,13 @@ category:
   - Blog
 ---
 
-The optimal approximation is finding an approximate function that minimizes some objective function based on the difference between your original and approximate function. This can be stated as a min-max problem. This post will look at the following optimization problem: we are looking for the $n^{th}$ order polynomial that minimizes the maximum error. This is typically called the 'best polynomial approximation,' but what is optimal depends on the metric you are judging something by.
+The optimal approximation is finding an approximate function that minimizes some objective function based on the difference between your original and approximate function. This can be stated as a min-max problem. This post will look at the following optimization problem: we are looking for the $n^{th}$ order polynomial that minimizes the maximum error. This is typically called the 'best polynomial approximation,' but what is optimal depends entrily on whay your objective function is.
 
 $$\min_{P\in\mathcal{P}^n} \max_{-1\leq x\leq 1} |F(x) - P(x)|$$
 
 The applications of this are far-reaching; almost every time a computer calculates a higher-order function, such as a Trig or a Bessel function, it is almost always evaluating a 'best approximation.' As a side note, this is not the only form that a best approximate can take; rational approximation is another important topic in the field.
 
-The typical algorithm used to solve these problems is the [Remez Algorithm](https://en.wikipedia.org/wiki/Remez_algorithm). The algorithm is a relatively simple iteration scheme composing of three parts. Given a function $F$ and order $n$, we have the following scheme.
+The typical algorithm used to solve these problems is the [Remez Algorithm](https://en.wikipedia.org/wiki/Remez_algorithm). The algorithm is a relatively simple iteration scheme composing of three parts. Given a function $F$ and polynomial order $n$, we have the following scheme.
 
 1. Solve the following linear system, $b_0 + b_1x_i + \dots + b_nx_i^n + (-1)^iE = F(x_i), i\in{1,\dots,n+2}$, where $x_i$ is in your set of points $K$.  
 
@@ -27,7 +27,7 @@ The theoretical basis for this algorithm is from the [Equioscillation theorem](h
 
 Now that we have the justifications out of the way, how do we actually do this? 
 
-We should start with step 0, the hidden step in this algorithm. We need an initial set of points, $K$. This should be taken as the Chebyshev nodes of order $n+2$ scaled to the region you need them in. Chebyshev nodes are the extrema of Chebyshev polynomials. You can think of this step as hot starting the algorithm with an initial guess of a Chebyshev series (which is usually a very good approximate).
+We should start with step 0, the hidden step in this algorithm. We need an initial set of points, $K$. This should be taken as the Chebyshev nodes of order $n+2$ scaled to the region you need them in. Chebyshev nodes are the extrema of Chebyshev polynomials. You can think of this step as hot starting the algorithm with a good initial guess (which is usually a very good approximate).
 
 Now that is out of the way; we can head to step 1. This is just setting up the system properly. This can be carried out with the following python code. The solution to the equation is the coefficients of the polynomial and the error term $E$. We want to split the error term away from the polynomial coefficients, which is done with the coeff variable.
 
@@ -62,7 +62,7 @@ r_i = lambda x: func(x) - numpy.polyval(coeffs, x)
 
 ```
 
-The most complicated part of this process is step number 3, where we are trying to find our function's local extrema. This is itself a two-part process. In the first part, we must bracket the extrema. Since we know that our points ${x_i}$ are on alternating signs of our residual, then we know that there must be a point between them were our residual is equal to $0$. So we use root-finding to do so. Since I am not using any derivative information, I did a [bisection seach](https://en.wikipedia.org/wiki/Bisection_method) to find the zeros.
+The most complicated part of this process is step number 3, where we are trying to find our function's local extrema. This is itself a two-part process. In the first part, we must bracket the extrema. Since we know that our points ${x_i}$ are on alternating signs of our residual, then we know that there must be a point between them were our residual is equal to $0$. So we use root-finding to do so. Since I am not using any derivative information, I did a [bisection seach](https://en.wikipedia.org/wiki/Bisection_method) to find the zeros, but much more sophisticaed methods exist such as [Brent's method](https://en.wikipedia.org/wiki/Brent%27s_method).
 
 ```python
 
@@ -113,7 +113,7 @@ This gives us the extrema of the residual function. We update our points $K$ and
 
 ![](/assets/imgs/Step5.png)
 
-The python code that implements the Remez algorithm will be posted below (the extrema at the endpoints are not being calculated properly, I made a simplifying assumption that is not necessarily true. You have been warned). Here I want to compare the $3^{rd}$ order best polynomial and a Taylor series of equal order centered at 0. We can see that the Taylor series is much more accurate in the neighborhood of 0 but is an order worse near the edges. This is contrasted with the best approximate's much more uniform error behavior. Most of the time, you would want to the behavior of the best approximate. 
+The python code that implements the Remez algorithm will be posted below (the extrema at the endpoints are not being calculated properly, I made a simplifying assumption that is not necessarily true. You have been warned). Here I want to compare the $3^{rd}$ order best polynomial and a Taylor series of equal order centered at 0. We can see that the Taylor series is much more accurate in the neighborhood of 0 but is an order worse near the edges. This is contrasted with the best approximate's much more uniform error behavior. Most of the time, you would want to the behavior of the 'best' approximate, but not necessarily all of the time.
 
 ![](/assets/imgs/rem_tay.png)
 
