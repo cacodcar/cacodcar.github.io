@@ -62,7 +62,7 @@ r_i = lambda x: func(x) - numpy.polyval(coeffs, x)
 
 ```
 
-The most complicated part of this process is step number 3, where we are trying to find our function's local extrema. This is itself a two-part process. In the first part, we must bracket the extrema. Since we know that our points ${x_i}$ are on alternating signs of our residual, then we know that there must be a point between them were our residual is equal to $0$. So we use root-finding to do so. Since I am not using any derivative information, I did a [bisection seach](https://en.wikipedia.org/wiki/Bisection_method) to find the zeros, but much more sophisticaed methods exist such as [Brent's method](https://en.wikipedia.org/wiki/Brent%27s_method).
+The most complicated part of this process is step number 3, where we are trying to find our function's local extrema. This is itself a two-part process. In the first part, we must bracket the extrema. Since we know that our points ${x_i}$ are on alternating signs of our residual, then we know that there must be a point between them were our residual is equal to $0$. So we use root-finding to do so. Since I am not using any derivative information, I did a [bisection seach](https://en.wikipedia.org/wiki/Bisection_method) to find the zeros, but much more sophisticated methods exist such as [Brent's method](https://en.wikipedia.org/wiki/Brent%27s_method).
 
 ```python
 
