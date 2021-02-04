@@ -7,7 +7,7 @@ highlighter:      rouge
 # Setup
 title:            Dustin
 tagline:          'Personal Website'
-description:      "PhD ChemE"
+description:      "ChemE PhD in Progress"
 url:              https://dkenefake.github.io
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
