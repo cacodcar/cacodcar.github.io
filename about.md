@@ -20,12 +20,12 @@ Texas Tech (Aug 2014 - July 2018)
 
 ### Graduate Teaching Assistant 
 
-* CHEN 364 - Kinetics and Reastor Design Fall 2019
-* CHEN 322 - Chemical Engineering Material Science Spring 2019
+* CHEN 364 - Kinetics and Reastor Design (Fall 2019)
+* CHEN 322 - Chemical Engineering Material Science (Spring 2019)
 
 ### Officer Positions
 
-* Internal Vice President of TAMU Chemical Engineering Graduate Student Association
+* Internal Vice President of TAMU Chemical Engineering Graduate Student Association (2020-2021)
 
 ### Peer Review
 
