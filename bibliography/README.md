@@ -6,7 +6,7 @@ and produces a BibTeX file for the current Google Sites/BibBase embed.
 
 ## Routine
 
-A weekly ChatGPT automation checks ORCID and publisher records, runs the sync,
+A ChatGPT automation runs on Monday mornings (Pacific time), checks ORCID and publisher records, runs the sync,
 and proposes changes in a GitHub pull request. Rahul reviews and merges the PR.
 GitHub Actions validates the bibliography and attaches the HTML preview on PRs
 and pushes. The automation is the scheduler; this repository deliberately has

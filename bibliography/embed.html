@@ -10,3 +10,17 @@ html,body{margin:0;background:#070e18;color:#e9e8e3;font-family:Georgia,'Times N
 #bibbase pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#111e2e;color:#e9e8e3}
 </style>
 <script src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fcacodcar%2Fcacodcar.github.io%2Fmaster%2Fbibliography%2Fpublications.bib&amp;jsonp=1&amp;showSearch=true&amp;group0=year&amp;sort=-year&amp;owner=kakodkar&amp;urlLabel=Paper"></script>
+<script>
+(() => {
+  const observer = new MutationObserver(labelSearch);
+  function labelSearch() {
+    const input = document.querySelector('#bibbase input');
+    if (!input) return;
+    input.placeholder = 'Search';
+    input.setAttribute('aria-label', 'Search bibliography');
+    observer.disconnect();
+  }
+  observer.observe(document.documentElement, {childList: true, subtree: true});
+  labelSearch();
+})();
+</script>
