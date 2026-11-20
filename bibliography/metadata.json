@@ -1,0 +1,261 @@
+{
+  "allen2021optimization": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "Allen, R. Cory and Baratsas, Stefanos G. and Kakodkar, Rahul and Avraamidou, Styliani and Powell, Joseph B. and Heuberger, Clara F. and Demirhan, C. Doga and Pistikopoulos, Efstratios N.",
+      "doi": "10.1016/j.ifacol.2021.08.311",
+      "journal": "IFAC-PapersOnLine",
+      "number": "3",
+      "pages": "621-626",
+      "publisher": "Elsevier BV",
+      "title": "{An Optimization Framework for Solving Integrated Planning and Scheduling Problems for Dense Energy Carriers}",
+      "url": "https://doi.org/10.1016/j.ifacol.2021.08.311",
+      "volume": "54"
+    },
+    "source": "https://api.crossref.org/works/10.1016/j.ifacol.2021.08.311"
+  },
+  "allen2023multi": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "Allen, Richard Cory and Baratsas, Stefanos G. and Kakodkar, Rahul and Avraamidou, Styliani and Demirhan, Cosar Doga and Heuberger-Austin, Clara F. and Klokkenburg, Mark and Pistikopoulos, Efstratios N.",
+      "doi": "10.1002/oca.2866",
+      "journal": "Optimal Control Applications and Methods",
+      "number": "2",
+      "pages": "355-372",
+      "publisher": "Wiley",
+      "title": "{A multi-period integrated planning and scheduling approach for developing energy systems}",
+      "url": "https://doi.org/10.1002/oca.2866",
+      "volume": "44"
+    },
+    "source": "https://api.crossref.org/works/10.1002/oca.2866"
+  },
+  "de2025integrated": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "De Sousa, Marco P. and Montano Flores, Betsie Sara Monserrat and Kakodkar, Rahul and Pistikopoulos, Efstratios N.",
+      "doi": "10.1007/s10098-025-03274-x",
+      "journal": "Clean Technologies and Environmental Policy",
+      "number": "13",
+      "pages": "8981-9002",
+      "publisher": "Springer Science and Business Media LLC",
+      "title": "{Integrated optimization of hydrogen production: evaluating scope 3 emissions and sustainable pathways}",
+      "url": "https://doi.org/10.1007/s10098-025-03274-x",
+      "url_pdf": "https://link.springer.com/content/pdf/10.1007/s10098-025-03274-x.pdf",
+      "volume": "27"
+    },
+    "pdf_source": "https://link.springer.com/content/pdf/10.1007/s10098-025-03274-x.pdf",
+    "source": "https://api.crossref.org/works/10.1007/s10098-025-03274-x"
+  },
+  "doi_4813ec013665": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "Shah, Harsh B. and Kakodkar, Rahul and Kenefake, Dustin and Sahinidis, Nikolaos V. and Pistikopoulos, Efstratios N.",
+      "doi": "10.1016/j.apenergy.2026.128714",
+      "journal": "Applied Energy",
+      "pages": "128714",
+      "publisher": "Elsevier BV",
+      "title": "{Multiparametric optimization based decision making approach in energy systems planning under uncertainty}",
+      "url": "https://doi.org/10.1016/j.apenergy.2026.128714",
+      "volume": "426"
+    },
+    "source": "https://api.crossref.org/works/10.1016/j.apenergy.2026.128714"
+  },
+  "doi_d5bb52124bae": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "Montano Flores, Betsie and Iseri, Funda and Iseri, Halil and Kakodkar, Rahul and Serrate Cuellar, Walter Oscar and Mejia Brown, Gaston and Lazo Duabyakosky, Marcelo and Pappas, Konstantinos and Pistikopoulos, Efstratios N.",
+      "doi": "10.1007/s12667-026-00849-5",
+      "journal": "Energy Systems",
+      "publisher": "Springer Science and Business Media LLC",
+      "title": "{A multiscale framework for the design and analysis of energy systems in Bolivia}",
+      "url": "https://doi.org/10.1007/s12667-026-00849-5",
+      "url_pdf": "https://link.springer.com/content/pdf/10.1007/s12667-026-00849-5.pdf"
+    },
+    "pdf_source": "https://link.springer.com/content/pdf/10.1007/s12667-026-00849-5.pdf",
+    "source": "https://api.crossref.org/works/10.1007/s12667-026-00849-5"
+  },
+  "flores2025integrating": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "Flores, Betsie S. M. Montano and Kakodkar, Rahul and Sousa, Marco P. De and Niknezhad, Shayan S. and Pistikopoulos, Efstratios N.",
+      "doi": "10.69997/sct.162874",
+      "journal": "Systems and Control Transactions",
+      "pages": "771-777",
+      "publisher": "PSE Press",
+      "title": "{Integrating Carbon Value Vectors in the Energy and Materials Transition Nexus: A Case Study on Mobility Optimization}",
+      "url": "https://doi.org/10.69997/sct.162874",
+      "url_pdf": "https://psecommunity.org/wp-content/plugins/wpor/includes/file/2506/LAPSE-2025.0276-1v1.pdf",
+      "volume": "4"
+    },
+    "pdf_source": "https://psecommunity.org/wp-content/plugins/wpor/includes/file/2506/LAPSE-2025.0276-1v1.pdf",
+    "source": "https://api.crossref.org/works/10.69997/sct.162874"
+  },
+  "kakodkar2021integrated": {
+    "fields": {
+      "url_pdf": "https://oaktrust.library.tamu.edu/server/api/core/bitstreams/8b15d940-2b8e-4506-b51f-34ee231f2264/content"
+    },
+    "pdf_source": "https://oaktrust.library.tamu.edu/server/api/core/bitstreams/8b15d940-2b8e-4506-b51f-34ee231f2264/content"
+  },
+  "kakodkar2022review": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "Kakodkar, R. and He, G. and Demirhan, C.D. and Arbabzadeh, M. and Baratsas, S.G. and Avraamidou, S. and Mallapragada, D. and Miller, I. and Allen, R.C. and Gen\\c{c}er, E. and Pistikopoulos, E.N.",
+      "doi": "10.1016/j.rser.2022.112277",
+      "journal": "Renewable and Sustainable Energy Reviews",
+      "pages": "112277",
+      "publisher": "Elsevier BV",
+      "title": "{A review of analytical and optimization methodologies for transitions in multi-scale energy systems}",
+      "url": "https://doi.org/10.1016/j.rser.2022.112277",
+      "volume": "160"
+    },
+    "source": "https://api.crossref.org/works/10.1016/j.rser.2022.112277"
+  },
+  "kakodkar2023framework": {
+    "fields": {
+      "url_pdf": "https://skoge.folk.ntnu.no/prost/proceedings/focapo-cpc-2023/Contributed%20Papers%20%28Posters%29/112_Contributed.pdf"
+    },
+    "pdf_source": "https://skoge.folk.ntnu.no/prost/proceedings/focapo-cpc-2023/Contributed%20Papers%20%28Posters%29/112_Contributed.pdf"
+  },
+  "kakodkar2023hydrogen": {
+    "fields": {
+      "ENTRYTYPE": "incollection",
+      "author": "Kakodkar, Rahul and Sundar, Swaminathan and Pistikopoulos, Efstratios N.",
+      "booktitle": "Handbook of Smart Energy Systems",
+      "doi": "10.1007/978-3-030-97940-9_171",
+      "pages": "2987-3007",
+      "publisher": "Springer International Publishing",
+      "title": "{Hydrogen-Based Dense Energy Carriers in Energy Transition Solutions}",
+      "url": "https://doi.org/10.1007/978-3-030-97940-9_171"
+    },
+    "source": "https://api.crossref.org/works/10.1007/978-3-030-97940-9_171"
+  },
+  "kakodkar2024multiperiod": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "Kakodkar, Rahul and Allen, R. Cory and Demirhan, C. Doga and Fu, Xiao and Pappas, Iosif and Mutlu, Mete and Pistikopoulos, Efstratios N.",
+      "doi": "10.3390/pr12030469",
+      "journal": "Processes",
+      "number": "3",
+      "pages": "469",
+      "publisher": "MDPI AG",
+      "title": "{Multiperiod Modeling and Optimization of Hydrogen-Based Dense Energy Carrier Supply Chains}",
+      "url": "https://doi.org/10.3390/pr12030469",
+      "url_pdf": "https://psecommunity.org/wp-content/plugins/wpor/includes/file/2406/LAPSE-2024.0743-1v1.pdf",
+      "volume": "12"
+    },
+    "pdf_source": "https://psecommunity.org/wp-content/plugins/wpor/includes/file/2406/LAPSE-2024.0743-1v1.pdf",
+    "source": "https://api.crossref.org/works/10.3390/pr12030469"
+  },
+  "kakodkar2024robust": {
+    "fields": {
+      "ENTRYTYPE": "incollection",
+      "booktitle": "Computer Aided Chemical Engineering",
+      "doi": "10.1016/b978-0-443-28824-1.50209-x",
+      "pages": "1249-1254",
+      "publisher": "Elsevier",
+      "title": "{Robust Scheduling of Energy Systems Under Forecasting Uncertainty {\\textendash} A Multi-Parametric Optimization Approach}",
+      "url": "https://doi.org/10.1016/b978-0-443-28824-1.50209-x"
+    },
+    "source": "https://api.crossref.org/works/10.1016/b978-0-443-28824-1.50209-x"
+  },
+  "kakodkar2024towards": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "Kakodkar, Rahul and Flores, Betsie Montano and Sousa, Marco De and Lin, Yilun and Pistikopoulos, Efstratios N.",
+      "doi": "10.69997/sct.171988",
+      "journal": "Systems and Control Transactions",
+      "pages": "461-468",
+      "publisher": "PSE Press",
+      "title": "{Towards Energy and Material Transition Integration � A Systematic Multi-scale Modeling and Optimization Framework}",
+      "url": "https://doi.org/10.69997/sct.171988",
+      "url_pdf": "https://psecommunity.org/wp-content/plugins/wpor/includes/file/2408/LAPSE-2024.1563-1v2.pdf",
+      "volume": "3"
+    },
+    "pdf_source": "https://psecommunity.org/wp-content/plugins/wpor/includes/file/2408/LAPSE-2024.1563-1v2.pdf",
+    "source": "https://api.crossref.org/works/10.69997/sct.171988"
+  },
+  "kenefake2023novel": {
+    "fields": {
+      "ENTRYTYPE": "incollection",
+      "booktitle": "Computer Aided Chemical Engineering",
+      "doi": "10.1016/b978-0-443-15274-0.50292-4",
+      "pages": "1841-1846",
+      "publisher": "Elsevier",
+      "title": "{A novel neural network bounds-tightening procedure for multiparametric programming and control}",
+      "url": "https://doi.org/10.1016/b978-0-443-15274-0.50292-4"
+    },
+    "source": "https://api.crossref.org/works/10.1016/b978-0-443-15274-0.50292-4"
+  },
+  "kenefake2024multiparametric": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "Kenefake, Dustin and Kakodkar, Rahul and Akundi, Sahithi S. and Ali, Moustafa and Pistikopoulos, Efstratios N.",
+      "doi": "10.1016/j.conengprac.2024.106041",
+      "journal": "Control Engineering Practice",
+      "pages": "106041",
+      "publisher": "Elsevier BV",
+      "title": "{A multiparametric approach to accelerating ReLU neural network based model predictive control}",
+      "url": "https://doi.org/10.1016/j.conengprac.2024.106041",
+      "volume": "151"
+    },
+    "source": "https://api.crossref.org/works/10.1016/j.conengprac.2024.106041"
+  },
+  "montano2025modeling": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "Montano Flores, Betsie S. M. and De Sousa, Marco P. and Kakodkar, Rahul and Niknezhad, Shayan Sean and Pistikopoulos, Efstratios N.",
+      "doi": "10.1021/acs.iecr.5c02202",
+      "journal": "Industrial \\& Engineering Chemistry Research",
+      "number": "41",
+      "pages": "19937-19952",
+      "publisher": "American Chemical Society (ACS)",
+      "title": "{A Modeling and Optimization Framework for Energy-Materials-Mobility Transition Nexus}",
+      "url": "https://doi.org/10.1021/acs.iecr.5c02202",
+      "volume": "64"
+    },
+    "source": "https://api.crossref.org/works/10.1021/acs.iecr.5c02202"
+  },
+  "sousa2025integrating": {
+    "fields": {
+      "ENTRYTYPE": "inproceedings",
+      "author": "Sousa, Marco P. De and Kakodkar, Rahul and Flores, Betsie M. and Suresh, Saatvi and Shah, Harsh B. and Kenefake, Dustin and Pappas, Iosif and Fu, Xiao and Demirhan, Doga C. and Ruggiero, Brianna and Mutlu, Mete and Pistikopoulos, Efstratios N.",
+      "booktitle": "Systems and Control Transactions",
+      "doi": "10.69997/sct.171539",
+      "pages": "753-758",
+      "publisher": "PSE Press",
+      "title": "{Integrating Time-Varying Environmental Indicators into an Energy Systems Modeling and Optimization Framework for Enhanced Sustainability}",
+      "url": "https://doi.org/10.69997/sct.171539",
+      "url_pdf": "https://psecommunity.org/wp-content/plugins/wpor/includes/file/2506/LAPSE-2025.0273-1v1.pdf",
+      "volume": "4"
+    },
+    "pdf_source": "https://psecommunity.org/wp-content/plugins/wpor/includes/file/2506/LAPSE-2025.0273-1v1.pdf",
+    "source": "https://api.crossref.org/works/10.69997/sct.171539"
+  },
+  "sundar2025techno": {
+    "fields": {
+      "ENTRYTYPE": "article",
+      "author": "Sundar, Swaminathan and Kakodkar, Rahul and Pistikopoulos, Efstratios N.",
+      "doi": "10.1016/j.compchemeng.2025.109409",
+      "journal": "Computers \\& Chemical Engineering",
+      "pages": "109409",
+      "publisher": "Elsevier BV",
+      "title": "{Techno-economic analysis and life cycle assessment of a novel algae-based CCUS technology}",
+      "url": "https://doi.org/10.1016/j.compchemeng.2025.109409",
+      "volume": "205"
+    },
+    "source": "https://api.crossref.org/works/10.1016/j.compchemeng.2025.109409"
+  },
+  "vedant2024information": {
+    "fields": {
+      "ENTRYTYPE": "incollection",
+      "author": "Vedant, Shivam and Kakodkar, Rahul and Chrisandina, Natasha J. and Nkoutche, Catherine and Iakovou, Eleftherios and El-Halwagi, Mahmoud M. and Pistikopoulos, Efstratios N.",
+      "booktitle": "Computer Aided Chemical Engineering",
+      "doi": "10.1016/b978-0-443-28824-1.50045-4",
+      "pages": "265-270",
+      "publisher": "Elsevier",
+      "title": "{Information sharing for cost-effective risk mitigation in supply chains: A methodological framework}",
+      "url": "https://doi.org/10.1016/b978-0-443-28824-1.50045-4"
+    },
+    "source": "https://api.crossref.org/works/10.1016/b978-0-443-28824-1.50045-4"
+  }
+}

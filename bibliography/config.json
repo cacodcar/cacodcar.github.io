@@ -1,0 +1,18 @@
+{
+  "orcid": "0000-0002-4139-083X",
+  "name": "Rahul Kakodkar",
+  "family_names": [
+    "kakodkar",
+    "kakaodkar"
+  ],
+  "given_name": "rahul",
+  "minimum_entries": 51,
+  "source_url": "https://bibbase.org/network/files/NbjvQ5R5K8kj9nHwT",
+  "ignored_dois": {
+    "10.1016/j.apenergy.2024.124900": "Present in ORCID, but publisher author list does not include Rahul Kakodkar. Requires owner review."
+  },
+  "additional_dois": [
+    "10.1007/s12667-026-00849-5",
+    "10.1016/j.apenergy.2026.128714"
+  ]
+}
