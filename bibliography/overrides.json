@@ -1,0 +1,48 @@
+{
+  "de2025integrated": {
+    "fields": {
+      "title": "{Integrated optimization of hydrogen production: evaluating scope 3 emissions and sustainable pathways}"
+    },
+    "reason": "Remove the imported author suffix from the title; use the publisher title.",
+    "sources": [
+      "https://doi.org/10.1007/s10098-025-03274-x"
+    ]
+  },
+  "kakodkar2023framework": {
+    "fields": {
+      "url": "https://skoge.folk.ntnu.no/prost/proceedings/focapo-cpc-2023/Contributed%20Papers%20%28Posters%29/112_Contributed.pdf"
+    },
+    "reason": "Link the paper in the hosted conference proceedings.",
+    "sources": [
+      "https://skoge.folk.ntnu.no/prost/proceedings/focapo-cpc-2023/Contributed%20Papers%20%28Posters%29/112_Contributed.pdf"
+    ]
+  },
+  "kakodkar2024towards": {
+    "fields": {
+      "title": "Towards Energy and Material Transition Integration - A Systematic Multiscale Modeling and Optimization Framework"
+    },
+    "reason": "Preserve the readable title; Crossref currently contains a replacement character.",
+    "sources": [
+      "https://psecommunity.org/LAPSE:2024.1563"
+    ]
+  },
+  "kakodkar2025dissertation": {
+    "fields": {
+      "title": "{Energia: A Data-Informed Decision Making and Risk Assessment Framework for Energy Transition Scenario Analysis}",
+      "url": "https://hdl.handle.net/1969.1/1595512"
+    },
+    "reason": "Use the institutional repository title and permanent landing page.",
+    "sources": [
+      "https://oaktrust.library.tamu.edu/items/776b9d76-f1ab-4c81-83b2-616ac9c779f8"
+    ]
+  },
+  "kenefake2023novel": {
+    "fields": {
+      "author": "Kenefake, Dustin and Kakodkar, Rahul and Ali, Moustafa and Pistikopoulos, Efstratios N"
+    },
+    "reason": "Correct the author spelling; Rahul confirmed the imported typo and authorized corrections.",
+    "sources": [
+      "https://parametric.tamu.edu/people/bio/?name=rahul"
+    ]
+  }
+}

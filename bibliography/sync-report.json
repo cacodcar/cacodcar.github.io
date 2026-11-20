@@ -1,0 +1,52 @@
+{
+  "flagged": [
+    {
+      "reason": "No DOI in ORCID; existing entries preserved.",
+      "title": "Hydrogen-Based Dense Energy Carriers in Energy Transition Solutions"
+    },
+    {
+      "doi": "10.1016/j.apenergy.2024.124900",
+      "reason": "Present in ORCID, but publisher author list does not include Rahul Kakodkar. Requires owner review."
+    },
+    {
+      "doi": "10.1016/j.compchemeng.2025.109409",
+      "key": "sundar2025techno",
+      "reason": "Existing year 2025 retained; publisher year is 2026."
+    }
+  ],
+  "imported": [
+    "doi_d5bb52124bae",
+    "doi_4813ec013665"
+  ],
+  "matched": [
+    "allen2023multi",
+    "kakodkar2023hydrogen",
+    "de2025integrated",
+    "kenefake2023novel",
+    "vedant2024information",
+    "kakodkar2024robust",
+    "sundar2025techno",
+    "kenefake2024multiparametric",
+    "allen2021optimization",
+    "kakodkar2022review",
+    "montano2025modeling",
+    "kakodkar2024multiperiod",
+    "flores2025integrating",
+    "sousa2025integrating",
+    "kakodkar2024towards"
+  ],
+  "pdf_unavailable": [
+    "allen2023multi",
+    "montano2025modeling"
+  ],
+  "pdf_verified": [
+    "flores2025integrating",
+    "kakodkar2021integrated",
+    "kakodkar2023framework",
+    "kakodkar2024multiperiod",
+    "kakodkar2024towards",
+    "sousa2025integrating",
+    "de2025integrated",
+    "doi_d5bb52124bae"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "doi_4813ec013665": {
+    "ENTRYTYPE": "article",
+    "ID": "doi_4813ec013665",
+    "author": "Shah, Harsh B. and Kakodkar, Rahul and Kenefake, Dustin and Sahinidis, Nikolaos V. and Pistikopoulos, Efstratios N.",
+    "doi": "10.1016/j.apenergy.2026.128714",
+    "journal": "Applied Energy",
+    "pages": "128714",
+    "publisher": "Elsevier BV",
+    "title": "{Multiparametric optimization based decision making approach in energy systems planning under uncertainty}",
+    "url": "https://doi.org/10.1016/j.apenergy.2026.128714",
+    "volume": "426",
+    "year": "2026"
+  },
+  "doi_d5bb52124bae": {
+    "ENTRYTYPE": "article",
+    "ID": "doi_d5bb52124bae",
+    "author": "Montano Flores, Betsie and Iseri, Funda and Iseri, Halil and Kakodkar, Rahul and Serrate Cuellar, Walter Oscar and Mejia Brown, Gaston and Lazo Duabyakosky, Marcelo and Pappas, Konstantinos and Pistikopoulos, Efstratios N.",
+    "doi": "10.1007/s12667-026-00849-5",
+    "journal": "Energy Systems",
+    "publisher": "Springer Science and Business Media LLC",
+    "title": "{A multiscale framework for the design and analysis of energy systems in Bolivia}",
+    "url": "https://doi.org/10.1007/s12667-026-00849-5",
+    "year": "2026"
+  }
+}

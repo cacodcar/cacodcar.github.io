@@ -50,3 +50,8 @@ _config.dev.yml
 .vscode
 *.gem
 .bundle/
+
+# Bibliography tools
+.venv-bibliography/
+__pycache__/
+*.pyc
